@@ -1,0 +1,70 @@
+{
+  "target": "XE75 Pro V3 1.5.0 Build 20260603 Rel. 15804",
+  "purpose": "Authenticated read-only VLAN status page; no device configuration writes",
+  "files": [
+    {
+      "path": "usr/lib/lua/luci/controller/admin/vlan_status.lua",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "a696537ec5b6bfa79196950dbc17ebe734b8b17c6c4b858fd8329d99204cd4af",
+      "bytes": 1634
+    },
+    {
+      "path": "www/webpages/config/models.json",
+      "new": false,
+      "stock_sha256": "1bcb0aee24dcc21f9d4e945dad8b98192c3e48a972356b9f6ce1a298b2ef1eef",
+      "patched_sha256": "7b69c811ac99a7c66974b18409974183c325bba43e046571f6d509a36e1b9db4",
+      "bytes": 3361
+    },
+    {
+      "path": "www/webpages/config/modules.json",
+      "new": false,
+      "stock_sha256": "9a0e16e24c9e9387566cfab3d6e4bb9f68f8fb54b90f89b4bb5d163e622654ec",
+      "patched_sha256": "070384df908bf2f6a946f0238ff028877509e421429c7ea3678ead7a4b504e66",
+      "bytes": 3121
+    },
+    {
+      "path": "www/webpages/config/navigator.ap.json",
+      "new": false,
+      "stock_sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35",
+      "patched_sha256": "b3febd9a7537d068545f563634f4ad70d4e416f4725165f4dad117a0f29640b1",
+      "bytes": 1465
+    },
+    {
+      "path": "www/webpages/config/navigator.json",
+      "new": false,
+      "stock_sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35",
+      "patched_sha256": "b3febd9a7537d068545f563634f4ad70d4e416f4725165f4dad117a0f29640b1",
+      "bytes": 1465
+    },
+    {
+      "path": "www/webpages/locale/en_US/lan.js",
+      "new": false,
+      "stock_sha256": "899039430964d3ea91be22e4b73dc134c77ec34595ba8329de923c68ff79ccde",
+      "patched_sha256": "11e84afd516b74e86342448c90670a349b841995aaee346389474afb89787a26",
+      "bytes": 24706
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/controllers.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b",
+      "bytes": 2041
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/models.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6",
+      "bytes": 2160
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/view.html",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1",
+      "bytes": 1183
+    }
+  ],
+  "deployment_receipt": "analysis/native-ui-runtime/deployment.json"
+}

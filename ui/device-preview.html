@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Deco VLAN preview</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#263c48;background:#f4f8fa;line-height:1.5}*{box-sizing:border-box}body{margin:0}header{background:#fff;border-bottom:1px solid #dce7eb;padding:22px max(24px,calc((100% - 960px)/2))}.brand{font-weight:750;letter-spacing:.08em;color:#087e87}main{max-width:1008px;margin:40px auto;padding:0 24px}.notice{background:#fff5d8;color:#614700;border:1px solid #e7d095;border-radius:10px;padding:16px 20px}.badge{font-size:12px;font-weight:750;letter-spacing:.1em}h1{font-size:30px;margin:30px 0 6px;letter-spacing:-.025em}.intro{color:#536b78;margin:0 0 24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#fff;border:1px solid #dce7eb;border-radius:14px;padding:24px}h2{font-size:19px;margin:0 0 20px}.label{color:#536b78;font-size:14px}.value{font-size:36px;font-weight:700;color:#087e87;margin:0 0 12px}dl{margin:0}dt{color:#536b78;margin-top:16px;font-size:14px}dd{margin:4px 0 0;font-weight:600}.note{color:#536b78;font-size:14px;margin:24px 0}footer{border-top:1px solid #dce7eb;padding-top:16px;color:#536b78;font-size:13px}@media(max-width:620px){main{margin:24px auto}.grid{grid-template-columns:1fr}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<header><span class="brand">DECO / CUSTOM PREVIEW</span></header>
+<main>
+<section class="notice" aria-label="Preview notice"><span class="badge">SAMPLE DATA</span><div>This is a temporary design preview. These values are examples, not live device settings.</div></section>
+<h1>VLAN status</h1>
+<p class="intro">A first look at a custom network page for your Deco.</p>
+<div class="grid">
+<section class="card" aria-label="Sample guest network">
+<h2>Guest network</h2><div class="label">Example VLAN ID</div><div class="value">30</div>
+<dl><dt>Example tagging setting</dt><dd>Enabled</dd><dt>Setting scope</dt><dd>All guest Wi-Fi bands</dd><dt>Live packet tagging</dt><dd>Not verified by this preview</dd></dl>
+</section>
+<section class="card" aria-label="IoT and live status">
+<h2>IoT network</h2><div class="label">Custom VLAN controls</div><div class="value">Pending</div>
+<dl><dt>IoT VLAN backend</dt><dd>Not implemented</dd><dt>Live status connection</dt><dd>Not connected</dd><dt>Configuration controls</dt><dd>Not available in this preview</dd></dl>
+</section>
+</div>
+<p class="note">Preview only. This page does not read or change the Deco's settings.</p>
+<footer>Temporary page. It disappears when its volatile storage is cleared or the Deco reboots.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+[
+    {
+        "name": "networkMap",
+        "text": "NETWORK_MAP"
+    },
+    {
+        "name": "advanced",
+        "text": "ADVANCED",
+        "children": [
+            {
+                "name": "networkStatus",
+                "text": "STATUS"
+            },
+            {
+                "name": "guestVlan",
+                "text": "VLAN_STATUS"
+            },
+            {
+                "name": "system",
+                "text": "SYSTEM",
+                "children": [
+                    {
+                        "name": "firmwareDeco",
+                        "text": "FIRMWARE"
+                    },
+                    {
+                        "name": "backupRestore",
+                        "text": "BACKUP_RESTORE"
+                    },
+                    {
+                        "name": "sysLog",
+                        "text": "SYSTEM_LOG"
+                    },
+                    {
+                        "name": "timeSettings",
+                        "text": "TIME_SETTINGS"
+                    },
+                    {
+                        "name": "cwmp",
+                        "text": "CWMP"
+                    },
+                    {
+                        "name": "reboot",
+                        "text": "REBOOT"
+                    },
+                    {
+                        "name": "sysParams",
+                        "text": "SYSPARAMS"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "modules": {
+    "guestVlan": {
+      "controller": "./modules/advanced/network/guestVlan/controllers.js",
+      "view": "./modules/advanced/network/guestVlan/view.html"
+    }
+  },
+  "models": {
+    "guestVlanStatus": "./modules/advanced/network/guestVlan/models.js"
+  },
+  "navigation": [
+    {
+      "path": "config/navigator.json",
+      "parent": "advanced",
+      "after": "networkStatus",
+      "item": {"name": "guestVlan", "text": "VLAN_STATUS"}
+    },
+    {
+      "path": "config/navigator.ap.json",
+      "parent": "advanced",
+      "after": "networkStatus",
+      "item": {"name": "guestVlan", "text": "VLAN_STATUS"}
+    }
+  ],
+  "locale": {
+    "path": "locale/en_US/lan.js",
+    "menu": {
+      "VLAN_STATUS": "VLAN status"
+    },
+    "groups": {
+      "VLAN_STATUS": {
+        "TITLE": "VLAN status",
+        "DESCRIPTION": "View guest VLAN tagging across all guest Wi-Fi bands and IoT network availability.",
+        "STATUS": "Status",
+        "LOADING": "Loading current settings...",
+        "READY": "Stored configuration",
+        "UNAVAILABLE": "The VLAN status service is unavailable. Reload the page to retry.",
+        "INVALID_RESPONSE": "The device did not return usable VLAN status. Reload the page to retry.",
+        "GUEST_NETWORK": "Guest Wi-Fi",
+        "GUEST_TAGGING": "Configured guest VLAN tagging",
+        "GUEST_VLAN_ID": "Configured guest VLAN ID",
+        "SCOPE": "Applies to",
+        "GUEST_SCOPE": "All guest Wi-Fi bands",
+        "IOT_NETWORK": "IoT network",
+        "IOT_VLAN": "IoT VLAN tagging",
+        "ENABLED": "Enabled",
+        "DISABLED": "Disabled",
+        "CONFIGURED": "Configured",
+        "NOT_CONFIGURED": "Not configured",
+        "NOT_SUPPORTED": "Not supported by this status service",
+        "READ_ONLY": "This page shows configured values. It does not verify packet tagging or change VLANs."
+      }
+    }
+  }
+}
