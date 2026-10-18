@@ -1,0 +1,1028 @@
+{
+  "cpu_port": 6,
+  "diagnostic_trace_included": false,
+  "files": {
+    "runtime35/boot_entry.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 2
+      },
+      "source_path": "runtime35/boot_entry.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 8337,
+        "sha1": "fb0fc54fc824d5454feb87132f828255862e464a",
+        "sha256": "7ad2764ca17ec11d2e10dee9f3fffe79b840d3c06fa92abe60f8a2afc54add2e"
+      },
+      "verified_source": {
+        "bytes": 8428,
+        "sha1": "8480a65cbd26c822c790956bb74ecf24881bc5c0",
+        "sha256": "a1a3a5737019c978b24ba5a0f11b6c51c2766fe7b385cf2b73a46fb88b37e329"
+      }
+    },
+    "runtime35/boot_include.sh": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/boot_include.sh",
+      "storage": "source",
+      "template": {
+        "bytes": 509,
+        "sha1": "0d3e52c9ab59b70669260c9881dea65779e2a509",
+        "sha256": "96355e9559b1b7593dd61d838ff88cf89ca9eb7666c4e253fcfdef867f46a1b9"
+      },
+      "verified_source": {
+        "bytes": 509,
+        "sha1": "0d3e52c9ab59b70669260c9881dea65779e2a509",
+        "sha256": "96355e9559b1b7593dd61d838ff88cf89ca9eb7666c4e253fcfdef867f46a1b9"
+      }
+    },
+    "runtime35/boot_wait.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/boot_wait.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 3819,
+        "sha1": "8a5a132f69874319b2f53d1b4efebeda468b49a9",
+        "sha256": "ce7561762f52887bccba85ae7e1a7bdf061dcf890179215c019386051c1d9f82"
+      },
+      "verified_source": {
+        "bytes": 3819,
+        "sha1": "8a5a132f69874319b2f53d1b4efebeda468b49a9",
+        "sha256": "ce7561762f52887bccba85ae7e1a7bdf061dcf890179215c019386051c1d9f82"
+      }
+    },
+    "runtime35/bounded_command.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@GATEWAY_IPV4@": 1
+      },
+      "source_path": "runtime35/bounded_command.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 15212,
+        "sha1": "51d11167977bd10110e3e3d8ce532ac1e6f82a01",
+        "sha256": "d963a29d724af2b09e45a5b095132b37a4e2ccd09c29985bf6bb1733ba030a64"
+      },
+      "verified_source": {
+        "bytes": 15206,
+        "sha1": "bc891f8b42cd69a245d627394e79677900491448",
+        "sha256": "123557d2e38727369586db559e3f66096b16004648b730968a77ab587e8cc5f8"
+      }
+    },
+    "runtime35/declarative_policy.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/declarative_policy.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 3820,
+        "sha1": "067c91a24f50d9f315c0150577ccb3a89d4c4d2d",
+        "sha256": "86e4db7408bd258f2e3ebad30be2ae5f818cfef76dce00dbf76e673e4781163a"
+      },
+      "verified_source": {
+        "bytes": 3820,
+        "sha1": "067c91a24f50d9f315c0150577ccb3a89d4c4d2d",
+        "sha256": "86e4db7408bd258f2e3ebad30be2ae5f818cfef76dce00dbf76e673e4781163a"
+      }
+    },
+    "runtime35/event_broker.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "source_path": "runtime35/event_broker.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 9476,
+        "sha1": "5010e4b3602a790d43eee7e4fe7133a52f67da0e",
+        "sha256": "1dea3e0d6361da801bf2b9e0c45cfcf47e0720739505a9f611bac61e052700b1"
+      },
+      "verified_source": {
+        "bytes": 9543,
+        "sha1": "7cfe6a7d2a05cbc5df89a082809e16b3eee0d125",
+        "sha256": "f6632d769634cb00343e5b67ac5f950153a7be6fe9f5d68e2c5b18ed163b3424"
+      }
+    },
+    "runtime35/event_state.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/event_state.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 2463,
+        "sha1": "f03b4d85aba41242c81c74a045aeb37e93d2ae20",
+        "sha256": "393871ede0909fdbc030d78b8d560b63703815b5edc0688b07c3f2f1dba9fc0f"
+      },
+      "verified_source": {
+        "bytes": 2463,
+        "sha1": "f03b4d85aba41242c81c74a045aeb37e93d2ae20",
+        "sha256": "393871ede0909fdbc030d78b8d560b63703815b5edc0688b07c3f2f1dba9fc0f"
+      }
+    },
+    "runtime35/hook_action.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/hook_action.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 859,
+        "sha1": "ce1511d21b488e71b5fa13cc031c73938f43df90",
+        "sha256": "baa4089aa6da403d3319f118d153071d8552ed4b29d78dc89524d1d87c4fd96d"
+      },
+      "verified_source": {
+        "bytes": 859,
+        "sha1": "ce1511d21b488e71b5fa13cc031c73938f43df90",
+        "sha256": "baa4089aa6da403d3319f118d153071d8552ed4b29d78dc89524d1d87c4fd96d"
+      }
+    },
+    "runtime35/hook_callbacks.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/hook_callbacks.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 3886,
+        "sha1": "0db9e6efb7a77d346d790c2ffd6e7eb3402e8511",
+        "sha256": "0e9977c8109c7f53ac6da9dc415a5c801f40a5bb0740ead30ca995b8b3397d63"
+      },
+      "verified_source": {
+        "bytes": 3886,
+        "sha1": "0db9e6efb7a77d346d790c2ffd6e7eb3402e8511",
+        "sha256": "0e9977c8109c7f53ac6da9dc415a5c801f40a5bb0740ead30ca995b8b3397d63"
+      }
+    },
+    "runtime35/hook_decision.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "source_path": "runtime35/hook_decision.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 4211,
+        "sha1": "8f17889c0ad0f434a0f0daa2aa457d23d5461f19",
+        "sha256": "22fbe7b88312f2afa0f3d8f8097fde75160dfd7b48bf11d18b8e2cbcf75777ad"
+      },
+      "verified_source": {
+        "bytes": 4278,
+        "sha1": "3974405bbac370276b068f40596600ef77484cca",
+        "sha256": "6c269612bbd7337e914f3b589f92e4364db9545a96ac7fce7283a65861d7da31"
+      }
+    },
+    "runtime35/hook_query.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/hook_query.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 11655,
+        "sha1": "a108341fd2387854419dc137a7e6e35a2bb2b025",
+        "sha256": "52359cec6f3649fcbc74754d2022966e6c570e331309ca6af429eb39961c1875"
+      },
+      "verified_source": {
+        "bytes": 11655,
+        "sha1": "a108341fd2387854419dc137a7e6e35a2bb2b025",
+        "sha256": "52359cec6f3649fcbc74754d2022966e6c570e331309ca6af429eb39961c1875"
+      }
+    },
+    "runtime35/kernel_platform.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@GATEWAY_IPV4@": 2
+      },
+      "source_path": "runtime35/kernel_platform.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 70499,
+        "sha1": "530c0ddcbce0775482eb869a692e0ff6a15b8deb",
+        "sha256": "67ee1dd8c8399869bdd04a19a5aac5b1f7e48f91496dc7d96a7a0a5b886a8aee"
+      },
+      "verified_source": {
+        "bytes": 70487,
+        "sha1": "7f5089516203bd731c930bc1d2f8c704daf0b581",
+        "sha256": "520d9eac39545fb82e40ce78ec9da23da077ac60980c64b8e6ab24b5e667cb78"
+      }
+    },
+    "runtime35/lifecycle_plan.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@GATEWAY_IPV4@": 1
+      },
+      "source_path": "runtime35/lifecycle_plan.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 9990,
+        "sha1": "7abd2994268ab658265db66d87cc45280854cd86",
+        "sha256": "8225a0ca2107c6e8244401f0f3da4287d851081bd1ba9b5ee334c05589483647"
+      },
+      "verified_source": {
+        "bytes": 9984,
+        "sha1": "4228ff5666d6423f803076af1bbe384d72a35b6e",
+        "sha256": "d8212571ab210b05e9a8ce082a2815bacc2a56a8dfea8e2e6db0c861253bdc6f"
+      }
+    },
+    "runtime35/managed_control.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "source_path": "runtime35/managed_control.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 43432,
+        "sha1": "f94d119703281752de18efd49866c5fb66664b7b",
+        "sha256": "dd9d740a490f1aed01062c462f60e41ba17ab49b378338c787e84b735ad6663a"
+      },
+      "verified_source": {
+        "bytes": 43499,
+        "sha1": "cedbb7c890ee933a8c75c43e46837a44c706144e",
+        "sha256": "76e4632b903441db1a3c2d7f68dc273d5bb6ce8facf74e76953cbddcacd542ee"
+      }
+    },
+    "runtime35/managed_cursor_guard.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/managed_cursor_guard.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 2311,
+        "sha1": "f13251c6f421941019a28a3302e6a1e5f7b81e86",
+        "sha256": "24bd47e1e0192e8ca88529f99f14753f2b4cc16efc5461ab65af63aa9bc36fb5"
+      },
+      "verified_source": {
+        "bytes": 2311,
+        "sha1": "f13251c6f421941019a28a3302e6a1e5f7b81e86",
+        "sha256": "24bd47e1e0192e8ca88529f99f14753f2b4cc16efc5461ab65af63aa9bc36fb5"
+      }
+    },
+    "runtime35/mobile_wireless_wrapper.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/mobile_wireless_wrapper.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 632,
+        "sha1": "9afb141cd963a6bd17479b77db276a4d1e8a52bb",
+        "sha256": "2fa0b4d0ffa37065fdb328d5edf7ccdb9763cffeda0ac298f9e22ee26d4ca3f6"
+      },
+      "verified_source": {
+        "bytes": 632,
+        "sha1": "9afb141cd963a6bd17479b77db276a4d1e8a52bb",
+        "sha256": "2fa0b4d0ffa37065fdb328d5edf7ccdb9763cffeda0ac298f9e22ee26d4ca3f6"
+      }
+    },
+    "runtime35/native_adapter.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/native_adapter.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 11792,
+        "sha1": "98f1007e011bd3b1d393cf0cad9751d79a752686",
+        "sha256": "1574aad8786774c861e9b8de550cd3a4c366f7348e4d2cafddc0577f03af3cc7"
+      },
+      "verified_source": {
+        "bytes": 11792,
+        "sha1": "98f1007e011bd3b1d393cf0cad9751d79a752686",
+        "sha256": "1574aad8786774c861e9b8de550cd3a4c366f7348e4d2cafddc0577f03af3cc7"
+      }
+    },
+    "runtime35/native_hooks.sh": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/native_hooks.sh",
+      "storage": "source",
+      "template": {
+        "bytes": 1158,
+        "sha1": "0eb2fedefa9f58722220bda321a077f432ef76ba",
+        "sha256": "55665808767910eabbaa2f4e5d646d6f49fb8af37be9f8bace95dafafb5f5606"
+      },
+      "verified_source": {
+        "bytes": 1158,
+        "sha1": "0eb2fedefa9f58722220bda321a077f432ef76ba",
+        "sha256": "55665808767910eabbaa2f4e5d646d6f49fb8af37be9f8bace95dafafb5f5606"
+      }
+    },
+    "runtime35/native_quiesce.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/native_quiesce.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 4817,
+        "sha1": "b42fe54327b71cd5945d2f20b7d485982ca9e530",
+        "sha256": "1c47579cc293f672bc3ad98ece94ce0827fe0f97206aff255ea6c8ee16e7dc27"
+      },
+      "verified_source": {
+        "bytes": 4817,
+        "sha1": "b42fe54327b71cd5945d2f20b7d485982ca9e530",
+        "sha256": "1c47579cc293f672bc3ad98ece94ce0827fe0f97206aff255ea6c8ee16e7dc27"
+      }
+    },
+    "runtime35/observe_owned_state.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/observe_owned_state.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 9132,
+        "sha1": "e8352ffc799deec844c0f31581a1afd7af73be65",
+        "sha256": "80f919f1602fec5eb45d6061c985e369ab7bf49661e4a8682737df8a2f7a26d0"
+      },
+      "verified_source": {
+        "bytes": 9132,
+        "sha1": "e8352ffc799deec844c0f31581a1afd7af73be65",
+        "sha256": "80f919f1602fec5eb45d6061c985e369ab7bf49661e4a8682737df8a2f7a26d0"
+      }
+    },
+    "runtime35/patches/core.sh": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 2679,
+        "sha1": "83c3049f1fecd0ab2838c5f2f2c0288146cd6b9f",
+        "sha256": "bdff8f46ff972b27de05137ace65b7d69c2f97608fc06a482fa866a9faf434ec"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/core.sh.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 3004,
+        "sha1": "058477eabd9f7913acb0086ccd5cd9b82cd49a02",
+        "sha256": "870c13a5cdac507376f813d0a46e93f8f29f9850227763c8f7b20224092f6f00"
+      },
+      "stock_relative_path": "lib/firewall/core.sh",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 5033,
+        "sha1": "6f9a205e5e58ba249d6da78d6e0b95c5dd1b521c",
+        "sha256": "e973b217f958f83fb8376b44399cd030ae6fca3c6303a9abdca7ee79c328c690"
+      },
+      "verified_source": {
+        "bytes": 5033,
+        "sha1": "6f9a205e5e58ba249d6da78d6e0b95c5dd1b521c",
+        "sha256": "e973b217f958f83fb8376b44399cd030ae6fca3c6303a9abdca7ee79c328c690"
+      }
+    },
+    "runtime35/patches/guest-eth.sh": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 6653,
+        "sha1": "c63c1e3703535459c793c7bcdc9c2fcf6f421313",
+        "sha256": "ee320f8ac500f70c2c319c0763a5296dddeb80ccfe01e3338fbc14b74189ea1e"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/guest-eth.sh.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 13441,
+        "sha1": "e053d89a21e8fb79834578b6994ebe25e1eaece2",
+        "sha256": "1442ed9ee1a13a2bb503da3ff0c5fa95e07b01c901586e836e8cb9f4fbe36556"
+      },
+      "stock_relative_path": "lib/guest-eth/guest-eth.sh",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 17688,
+        "sha1": "2326884c324bce7a08cd82b288b7bab35746a25d",
+        "sha256": "7f13f2d741183d0d67e050b2e12869ebbe495c179ba936a846c6dd7eac2b9b1c"
+      },
+      "verified_source": {
+        "bytes": 17688,
+        "sha1": "2326884c324bce7a08cd82b288b7bab35746a25d",
+        "sha256": "7f13f2d741183d0d67e050b2e12869ebbe495c179ba936a846c6dd7eac2b9b1c"
+      }
+    },
+    "runtime35/patches/guest-vlan.sh": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 2172,
+        "sha1": "2a9ee8425914df1271e560eb18d54e8bc489c0d4",
+        "sha256": "791c5e762fb70242da523cb41dd9f27b582f12de370081e48278f49877cf585c"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/guest-vlan.sh.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 5921,
+        "sha1": "e2439df74edc2cadfd7db27451fb3ab7c2ef7194",
+        "sha256": "2aca14c0925d7645447439008f3b8d6665ef8e331344d63cdac7cdddcefac4b6"
+      },
+      "stock_relative_path": "lib/guest-eth/guest-vlan.sh",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 7580,
+        "sha1": "7074647140fa8638edc54f6dbd241fb653eb3b0f",
+        "sha256": "e3e1341f6d12bbf493bc932e9902b1ad175ae1d9e2707647aa17c3c5bd314600"
+      },
+      "verified_source": {
+        "bytes": 7580,
+        "sha1": "7074647140fa8638edc54f6dbd241fb653eb3b0f",
+        "sha256": "e3e1341f6d12bbf493bc932e9902b1ad175ae1d9e2707647aa17c3c5bd314600"
+      }
+    },
+    "runtime35/patches/network": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 3350,
+        "sha1": "f59533b42b858725c3173f0a45429777bd3b2689",
+        "sha256": "ed6ad829943c43900b6fd9e89606204268ab92865660f3f5aa7f64e513fd9b7c"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/network.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 52168,
+        "sha1": "1e034f16c75c6f0b1ec14f2044ec17d13149354b",
+        "sha256": "3e432ee0461afc1c2c5a02650a4d6301a0a42000a92e04c70d191165ddf37d43"
+      },
+      "stock_relative_path": "etc_ro/init.d/network",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 54352,
+        "sha1": "4b5ca51dc99039ec6b97a246048c1a630f993537",
+        "sha256": "9397f8460aafcb8210a673d4ce21c3eaf0f43a28244a38698624b8b99dff2316"
+      },
+      "verified_source": {
+        "bytes": 54352,
+        "sha1": "4b5ca51dc99039ec6b97a246048c1a630f993537",
+        "sha256": "9397f8460aafcb8210a673d4ce21c3eaf0f43a28244a38698624b8b99dff2316"
+      }
+    },
+    "runtime35/patches/wifi": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 2325,
+        "sha1": "087978e6ed98ac34ab0cb68447efaf3b2d09dfc5",
+        "sha256": "f82b979a0648e4d88795e09460e3552cced3e32f574c6ed260279c853fd462f5"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/wifi.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 8606,
+        "sha1": "5e60b5a1c2b7c77eccdf02ff865e37102ad80bf5",
+        "sha256": "6693f7538a85f9b74c800bb9306ace110a620a1c2720fa76eb68fe743170d8ec"
+      },
+      "stock_relative_path": "sbin/wifi",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 10505,
+        "sha1": "37b2aeac2bc88acddef046e3b1f29d515d0229ea",
+        "sha256": "d9462784d155ed6cc401fd971499f61964b8913b9f7435be6fb6fc5126a2a02a"
+      },
+      "verified_source": {
+        "bytes": 10505,
+        "sha1": "37b2aeac2bc88acddef046e3b1f29d515d0229ea",
+        "sha256": "d9462784d155ed6cc401fd971499f61964b8913b9f7435be6fb6fc5126a2a02a"
+      }
+    },
+    "runtime35/patches/wificommon.sh": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 3181,
+        "sha1": "ac2cca157a66880ade486c3f0d1340fa08c521ba",
+        "sha256": "0fe66e4061f3be6f006179a92f7a5df63c38722592255b0ee47427f50a6cc4a5"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/wificommon.sh.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 50413,
+        "sha1": "80f70dba09375ee23a2673dfbe6c4aaf099c096b",
+        "sha256": "5f08c7380c4f446d8b9f6968579e7fc32c487968f5f4f949e4508d88394b8ae0"
+      },
+      "stock_relative_path": "lib/wifi/wificommon.sh",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 52812,
+        "sha1": "cc5b0eefcf5ce0f5ea2374c032d26a60207ec198",
+        "sha256": "13cc1ccdcd0cff82cebd6be2a6b067e5cd7c04b64bd0c2582b7fb940d8923bd4"
+      },
+      "verified_source": {
+        "bytes": 52812,
+        "sha1": "cc5b0eefcf5ce0f5ea2374c032d26a60207ec198",
+        "sha256": "13cc1ccdcd0cff82cebd6be2a6b067e5cd7c04b64bd0c2582b7fb940d8923bd4"
+      }
+    },
+    "runtime35/patches/wifiupdate.sh": {
+      "group": "runtime",
+      "patch": {
+        "bytes": 2329,
+        "sha1": "c53d2348535952cd8d18a6ba0c82fd78c88078e3",
+        "sha256": "66a94fb7367ab27366f60a1f869f7dff4ce9bf0b2d9817b13552325fc4fa26a8"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/runtime35/patches/wifiupdate.sh.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 64913,
+        "sha1": "b59e4db368cb39f6d874a35aa2036c684a742e2d",
+        "sha256": "ebf19ed75084da7726db5e2a05ebeca6d2db472e539fcb47941b5025861cec38"
+      },
+      "stock_relative_path": "lib/wifi/wifiupdate.sh",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 66698,
+        "sha1": "dfcf047d8c9ab9dc2a70a0f4ead0677a79caf79e",
+        "sha256": "80afa9f728914eb5b8d431dd13536433ef0fbf9d035b1820c683fddfe6a3c877"
+      },
+      "verified_source": {
+        "bytes": 66698,
+        "sha1": "dfcf047d8c9ab9dc2a70a0f4ead0677a79caf79e",
+        "sha256": "80afa9f728914eb5b8d431dd13536433ef0fbf9d035b1820c683fddfe6a3c877"
+      }
+    },
+    "runtime35/policy_readback.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/policy_readback.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 18141,
+        "sha1": "2538f45ca3b70b70439d220f792f5b049d473b7a",
+        "sha256": "08e048554359bbe69111c4a1ca87d54447869e5784b1c1497a68892d34eec637"
+      },
+      "verified_source": {
+        "bytes": 18141,
+        "sha1": "2538f45ca3b70b70439d220f792f5b049d473b7a",
+        "sha256": "08e048554359bbe69111c4a1ca87d54447869e5784b1c1497a68892d34eec637"
+      }
+    },
+    "runtime35/runtime_install.lua": {
+      "group": "runtime",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "source_path": "runtime35/runtime_install.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 26498,
+        "sha1": "c2399e6aa86631a71b9f66c23e8549d47fe66173",
+        "sha256": "39f27a4aeec79d9efe1b87912124f1667416eeec1ed90d148e8a7e87da2705a8"
+      },
+      "verified_source": {
+        "bytes": 26565,
+        "sha1": "30865963f2c2daa6b10bb463e9a8b5d0e379205b",
+        "sha256": "d6d49c0a9e775e301a49d01d43b8db74ba6e2ee612a6d171ea55a94bd18a4cd0"
+      }
+    },
+    "runtime35/scoped_create.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/scoped_create.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 5540,
+        "sha1": "c41fae3de3b124783480fd579cbf8df415a14aa1",
+        "sha256": "b93f03579ea9c7ce60ec34a18f2067f6cc6fbfbe09fba78c7e426c8e1a1a1e01"
+      },
+      "verified_source": {
+        "bytes": 5540,
+        "sha1": "c41fae3de3b124783480fd579cbf8df415a14aa1",
+        "sha256": "b93f03579ea9c7ce60ec34a18f2067f6cc6fbfbe09fba78c7e426c8e1a1a1e01"
+      }
+    },
+    "runtime35/scoped_vap.sh": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/scoped_vap.sh",
+      "storage": "source",
+      "template": {
+        "bytes": 8437,
+        "sha1": "1aaca0592af271df15348f4d87a051335e3bfcd8",
+        "sha256": "e78b29e258a0ae1f785435fbbd3485b8b3c1cb2fd846add532e1f4ced8c3a645"
+      },
+      "verified_source": {
+        "bytes": 8437,
+        "sha1": "1aaca0592af271df15348f4d87a051335e3bfcd8",
+        "sha256": "e78b29e258a0ae1f785435fbbd3485b8b3c1cb2fd846add532e1f4ced8c3a645"
+      }
+    },
+    "runtime35/uci_guard_loader.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/uci_guard_loader.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 993,
+        "sha1": "f575d61879d52d81023c7d4a221b91fa041d7527",
+        "sha256": "b9027f6a27e67e337e3b1e4104c9827dfb971406ca57d6591075c6fbeb160dc4"
+      },
+      "verified_source": {
+        "bytes": 993,
+        "sha1": "f575d61879d52d81023c7d4a221b91fa041d7527",
+        "sha256": "b9027f6a27e67e337e3b1e4104c9827dfb971406ca57d6591075c6fbeb160dc4"
+      }
+    },
+    "runtime35/uci_model_wrapper.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/uci_model_wrapper.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 659,
+        "sha1": "bbaeb179f3081686f85ba2556d6d1b7289d913cf",
+        "sha256": "3e3a8787f263d47f2c91b4934f66e7aeb3aeed7dcf165d07c2b87d5845851a36"
+      },
+      "verified_source": {
+        "bytes": 659,
+        "sha1": "bbaeb179f3081686f85ba2556d6d1b7289d913cf",
+        "sha256": "3e3a8787f263d47f2c91b4934f66e7aeb3aeed7dcf165d07c2b87d5845851a36"
+      }
+    },
+    "runtime35/wifi_quiet.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/wifi_quiet.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 2227,
+        "sha1": "95d16c09ac061ab4700bdf2e0f76e64ba777dbb9",
+        "sha256": "2e1022ab84a0dd64c638f4f3dd73535efa9a2e4aa25f40e6e72730f9a76f0ee9"
+      },
+      "verified_source": {
+        "bytes": 2227,
+        "sha1": "95d16c09ac061ab4700bdf2e0f76e64ba777dbb9",
+        "sha256": "2e1022ab84a0dd64c638f4f3dd73535efa9a2e4aa25f40e6e72730f9a76f0ee9"
+      }
+    },
+    "runtime35/worker.lua": {
+      "group": "runtime",
+      "profile_tokens": {},
+      "source_path": "runtime35/worker.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 14781,
+        "sha1": "46da78895cd120976158d01c1a4f20fe01828bb5",
+        "sha256": "1b39d5e5d31c5947b531654b970fea8629e2c7712777abd2e8fd2ae793fc840c"
+      },
+      "verified_source": {
+        "bytes": 14781,
+        "sha1": "46da78895cd120976158d01c1a4f20fe01828bb5",
+        "sha256": "1b39d5e5d31c5947b531654b970fea8629e2c7712777abd2e8fd2ae793fc840c"
+      }
+    },
+    "ui-patch-plan.json": {
+      "group": "ui_build_metadata",
+      "profile_tokens": {},
+      "source_path": "ui-patch-plan.json",
+      "storage": "source",
+      "template": {
+        "bytes": 4914,
+        "sha1": "812c13f98cad346fda10f9a05b73cd58321d8386",
+        "sha256": "b1ae6552aa58d69334137748f055f655b86726a7206548f0603438256679ab3e"
+      },
+      "verified_source": {
+        "bytes": 4914,
+        "sha1": "812c13f98cad346fda10f9a05b73cd58321d8386",
+        "sha256": "b1ae6552aa58d69334137748f055f655b86726a7206548f0603438256679ab3e"
+      }
+    },
+    "ui14/assets/usr/lib/lua/luci/controller/admin/vlan_status.lua": {
+      "group": "main_ui",
+      "profile_tokens": {
+        "@BEDROOM_DEVICE_ID@": 1,
+        "@CELLAR_DEVICE_ID@": 1,
+        "@MAIN_DEVICE_ID@": 2
+      },
+      "public_release_changes": [
+        "generic Main/Satellite 1/Satellite 2 labels"
+      ],
+      "source_path": "ui14/assets/usr/lib/lua/luci/controller/admin/vlan_status.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 21132,
+        "sha1": "b5d81ea75d705c3d7a6a48bcedd5e984f694d9b3",
+        "sha256": "bb06388f6b0b935c201b530c8ed52ef2f5b9c93ba9e565935ed444150ded8b8e"
+      },
+      "verified_source": {
+        "bytes": 21225,
+        "sha1": "878635ee4c37589d4be3f53fa4931baacf6f03b9",
+        "sha256": "7e97f4fb321145776f8631d5ed165aa51b696cf2c7a296c92d2d9d234582ccd2"
+      }
+    },
+    "ui14/assets/www/webpages/config/models.json": {
+      "group": "main_ui",
+      "patch": {
+        "bytes": 614,
+        "sha1": "ca2b8a6381798eff4f9f2f17c85a7908d333f089",
+        "sha256": "35e571c5c300764c94791e203d536bdd7b36d2ddafb7d3eeedcaca5a0c50b329"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/ui14/assets/www/webpages/config/models.json.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 3289,
+        "sha1": "10743daf56b1a1b71cef78fbb4923fc5ecab3853",
+        "sha256": "1bcb0aee24dcc21f9d4e945dad8b98192c3e48a972356b9f6ce1a298b2ef1eef"
+      },
+      "stock_relative_path": "www/webpages/config/models.json",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 3428,
+        "sha1": "ead679471109013fce736d30602230d5a54df3d7",
+        "sha256": "055e3ea287c9b2287926cfc2ed3598112fad6b075fbe0376dd6997d6879e8e08"
+      },
+      "verified_source": {
+        "bytes": 3428,
+        "sha1": "ead679471109013fce736d30602230d5a54df3d7",
+        "sha256": "055e3ea287c9b2287926cfc2ed3598112fad6b075fbe0376dd6997d6879e8e08"
+      }
+    },
+    "ui14/assets/www/webpages/config/modules.json": {
+      "group": "main_ui",
+      "patch": {
+        "bytes": 614,
+        "sha1": "d558e0ead21871cefe68d5a7bf4d8c5c817fabc3",
+        "sha256": "c68a10d3492bdadb37635c2758561bc0cc075fc53f3985c3535baa5624dadc99"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/ui14/assets/www/webpages/config/modules.json.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 2964,
+        "sha1": "2a25b5dab2f5ae609eb552737f450db58cd7fe69",
+        "sha256": "9a0e16e24c9e9387566cfab3d6e4bb9f68f8fb54b90f89b4bb5d163e622654ec"
+      },
+      "stock_relative_path": "www/webpages/config/modules.json",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 3271,
+        "sha1": "0071e9eb395c45b636ec9aef6d4396f744810fca",
+        "sha256": "618b8d72814f66e3add2dbae9cc29b98b75421072ed5d85a146af668090ea6a5"
+      },
+      "verified_source": {
+        "bytes": 3271,
+        "sha1": "0071e9eb395c45b636ec9aef6d4396f744810fca",
+        "sha256": "618b8d72814f66e3add2dbae9cc29b98b75421072ed5d85a146af668090ea6a5"
+      }
+    },
+    "ui14/assets/www/webpages/config/navigator.ap.json": {
+      "group": "main_ui",
+      "patch": {
+        "bytes": 560,
+        "sha1": "42b62349756c0a8e6befc415a2e52326ee2c67cb",
+        "sha256": "b114e5824b544990d9f7be50874ae7599286bc2d428e6c583e4e2976f226387b"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/ui14/assets/www/webpages/config/navigator.ap.json.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 1360,
+        "sha1": "c4d2d63c388e021a4fc3b11073be5e18cf791e0d",
+        "sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35"
+      },
+      "stock_relative_path": "www/webpages/config/navigator.ap.json",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 1564,
+        "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+        "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+      },
+      "verified_source": {
+        "bytes": 1564,
+        "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+        "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+      }
+    },
+    "ui14/assets/www/webpages/config/navigator.json": {
+      "group": "main_ui",
+      "patch": {
+        "bytes": 554,
+        "sha1": "97ec2e8d093e64e265fe04fa8a5ffb2278604912",
+        "sha256": "d8fb608942fe6a41ecd202c55486618eeae8e5146f99817d908666fd21be672e"
+      },
+      "patch_format": "unified_exact_v1",
+      "patch_path": "vendor-patches/ui14/assets/www/webpages/config/navigator.json.patch",
+      "profile_tokens": {},
+      "stock": {
+        "bytes": 1360,
+        "sha1": "c4d2d63c388e021a4fc3b11073be5e18cf791e0d",
+        "sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35"
+      },
+      "stock_relative_path": "www/webpages/config/navigator.json",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 1564,
+        "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+        "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+      },
+      "verified_source": {
+        "bytes": 1564,
+        "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+        "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+      }
+    },
+    "ui14/assets/www/webpages/locale/en_US/lan.js": {
+      "group": "main_ui",
+      "patch": {
+        "bytes": 4943,
+        "sha1": "d027bab8b8b64aabfec576da7b8ab955c86606cb",
+        "sha256": "e03131e5e95d36c1cb32e27869d165791869742242506d46283c1fbfe29a47c7"
+      },
+      "patch_format": "exact_byte_edits_v1",
+      "patch_path": "vendor-patches/ui14/assets/www/webpages/locale/en_US/lan.js.edits.json",
+      "profile_tokens": {},
+      "public_release_changes": [
+        "generic Main/Satellite 1/Satellite 2 labels, backend/model/view aligned"
+      ],
+      "stock": {
+        "bytes": 23708,
+        "sha1": "b7591d2cbf4b36812af5e8991867b7a7b7c546aa",
+        "sha256": "899039430964d3ea91be22e4b73dc134c77ec34595ba8329de923c68ff79ccde"
+      },
+      "stock_relative_path": "www/webpages/locale/en_US/lan.js",
+      "storage": "exact_stock_patch",
+      "template": {
+        "bytes": 28090,
+        "sha1": "430d72131e9349bb26ef9b8212f66d2c2a55faa6",
+        "sha256": "53c21e10fc0f303d59d275aa08725b829f3ec818266b8cb12bcf3a178dd12868"
+      },
+      "verified_source": {
+        "bytes": 28094,
+        "sha1": "5422faacecb5754cef94d67a392e74890e470c3e",
+        "sha256": "aa931f7ec93bdbf831e9da2e94bd7b1290d61a00c4d1a1d6739011275663f796"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/guestVlan/controllers.js": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/guestVlan/controllers.js",
+      "storage": "source",
+      "template": {
+        "bytes": 2041,
+        "sha1": "d3b27fb26ea556f0229704b775031ecbe55a2f11",
+        "sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b"
+      },
+      "verified_source": {
+        "bytes": 2041,
+        "sha1": "d3b27fb26ea556f0229704b775031ecbe55a2f11",
+        "sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/guestVlan/models.js": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/guestVlan/models.js",
+      "storage": "source",
+      "template": {
+        "bytes": 2160,
+        "sha1": "61814ada1ea493b25806579e0bab6ea1b399988a",
+        "sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6"
+      },
+      "verified_source": {
+        "bytes": 2160,
+        "sha1": "61814ada1ea493b25806579e0bab6ea1b399988a",
+        "sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/guestVlan/view.html": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/guestVlan/view.html",
+      "storage": "source",
+      "template": {
+        "bytes": 1183,
+        "sha1": "ad7d9cfa6a7aa6cf2f06ea03d57f0d3472f8df91",
+        "sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1"
+      },
+      "verified_source": {
+        "bytes": 1183,
+        "sha1": "ad7d9cfa6a7aa6cf2f06ea03d57f0d3472f8df91",
+        "sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/iotVlan/controllers.js": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/iotVlan/controllers.js",
+      "storage": "source",
+      "template": {
+        "bytes": 5427,
+        "sha1": "250c842a0bd64dad63bf6a924777ce25ae049e1a",
+        "sha256": "487d5e268a097c1d4eb7bbc4ab76a77e55520979423d8bcb82e9d29136822947"
+      },
+      "verified_source": {
+        "bytes": 5427,
+        "sha1": "250c842a0bd64dad63bf6a924777ce25ae049e1a",
+        "sha256": "487d5e268a097c1d4eb7bbc4ab76a77e55520979423d8bcb82e9d29136822947"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/iotVlan/models.js": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "public_release_changes": [
+        "generic Main/Satellite 1/Satellite 2 labels, backend/model/view aligned"
+      ],
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/iotVlan/models.js",
+      "storage": "source",
+      "template": {
+        "bytes": 4237,
+        "sha1": "b5870ef04605ebd1abe850c58674c05f1091d1a8",
+        "sha256": "7e191746792591aa67325e7eb52b24aa92b810a5216ececd12097121697af463"
+      },
+      "verified_source": {
+        "bytes": 4239,
+        "sha1": "c0fd6d77d24e101e7c59df2b35a2e132671d63e7",
+        "sha256": "a6b9ce94c8543e57d86e78c3ad74f269a0932cad7018839f96541644e9f32ee8"
+      }
+    },
+    "ui14/assets/www/webpages/modules/advanced/network/iotVlan/view.html": {
+      "group": "main_ui",
+      "profile_tokens": {},
+      "source_path": "ui14/assets/www/webpages/modules/advanced/network/iotVlan/view.html",
+      "storage": "source",
+      "template": {
+        "bytes": 1481,
+        "sha1": "3581e8b6a01cdc93e67f076bb637f6ff72dabffb",
+        "sha256": "ad781a8b31723238979738f77bce9e2dac8f7f66891e8f746f071a4156690740"
+      },
+      "verified_source": {
+        "bytes": 1481,
+        "sha1": "3581e8b6a01cdc93e67f076bb637f6ff72dabffb",
+        "sha256": "ad781a8b31723238979738f77bce9e2dac8f7f66891e8f746f071a4156690740"
+      }
+    },
+    "ui14/ui-boot-manifest.json": {
+      "group": "main_ui",
+      "profile_tokens": {
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "source_path": "ui14/ui-boot-manifest.json",
+      "storage": "source",
+      "template": {
+        "bytes": 17740,
+        "sha1": "2193f4df031596906c2f03b1011d18fee45ad724",
+        "sha256": "617317707a7f65e55ed48cd00fa83d10ec0b11ee6593d183dc802c27bafb0adf"
+      },
+      "verified_source": {
+        "bytes": 17764,
+        "sha1": "4284069b87a338b4b57ffca1b4482f6bd28772e0",
+        "sha256": "9f31826e4f9b9b6efc9e8d6ef3530c3fa6f4988dfd189a2227f8544e099792f4"
+      }
+    },
+    "ui14/ui_boot_install.lua": {
+      "group": "main_ui",
+      "profile_tokens": {
+        "@MAIN_DEVICE_ID@": 1
+      },
+      "public_release_changes": [
+        "zero sentinel disables historical private UI migration"
+      ],
+      "source_path": "ui14/ui_boot_install.lua",
+      "storage": "source",
+      "template": {
+        "bytes": 12588,
+        "sha1": "124c610fb25f79f2664e54a857a821c1c1dd5a05",
+        "sha256": "bf6d0ea9b9c8e8610bb135bd284d402b191a54364db43b7aa7f303fa92f7ea4e"
+      },
+      "verified_source": {
+        "bytes": 12612,
+        "sha1": "2d3c05f89d235abd607132af2c74a51804d7fded",
+        "sha256": "7da3d762bfa94f402b37987916ac245453b8c2771c7b102df1a2c17003ae9e18"
+      }
+    }
+  },
+  "firmware": {
+    "hardware": "V3",
+    "model": "XE75 Pro",
+    "version": "1.5.0 Build 20260603 Rel. 15804"
+  },
+  "fixed_vlan_id": 30,
+  "installation_authority_included": false,
+  "kind": "deco_iot_vlan_public_source_templates",
+  "live_result_claimed": false,
+  "main_ui_files": 14,
+  "native_transport_included": false,
+  "production_guest_hooks": true,
+  "profile_substitutions_only": [
+    "MAIN_DEVICE_ID",
+    "BEDROOM_DEVICE_ID",
+    "CELLAR_DEVICE_ID",
+    "GATEWAY_IPV4"
+  ],
+  "public_ui_changes": [
+    "Generic node labels",
+    "Historical private UI migration source replaced with zero sentinel; migration unsupported",
+    "Rendered UI descriptors and package hash recomputed by build tool"
+  ],
+  "runtime_files": 35,
+  "schema": 1,
+  "source_only": true,
+  "stock_input_required": true,
+  "ui_template_is_exact_deployed_bytes": false,
+  "vendor_full_source_distributed": false,
+  "vendor_patch_files": 12,
+  "version": "0.1.0-alpha",
+  "wired_port": 2
+}

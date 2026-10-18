@@ -1,0 +1,458 @@
+{
+  "assets": {
+    "usr/lib/lua/luci/controller/admin/vlan_status.lua": {
+      "bytes": 21225,
+      "sha1": "878635ee4c37589d4be3f53fa4931baacf6f03b9",
+      "sha256": "7e97f4fb321145776f8631d5ed165aa51b696cf2c7a296c92d2d9d234582ccd2"
+    },
+    "www/webpages/config/models.json": {
+      "bytes": 3428,
+      "sha1": "ead679471109013fce736d30602230d5a54df3d7",
+      "sha256": "055e3ea287c9b2287926cfc2ed3598112fad6b075fbe0376dd6997d6879e8e08",
+      "stock_sha1": "10743daf56b1a1b71cef78fbb4923fc5ecab3853"
+    },
+    "www/webpages/config/modules.json": {
+      "bytes": 3271,
+      "sha1": "0071e9eb395c45b636ec9aef6d4396f744810fca",
+      "sha256": "618b8d72814f66e3add2dbae9cc29b98b75421072ed5d85a146af668090ea6a5",
+      "stock_sha1": "2a25b5dab2f5ae609eb552737f450db58cd7fe69"
+    },
+    "www/webpages/config/navigator.ap.json": {
+      "bytes": 1564,
+      "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+      "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533",
+      "stock_sha1": "c4d2d63c388e021a4fc3b11073be5e18cf791e0d"
+    },
+    "www/webpages/config/navigator.json": {
+      "bytes": 1564,
+      "sha1": "494be13c60dfa3630f8c01c4fdfbd3fa4394182b",
+      "sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533",
+      "stock_sha1": "c4d2d63c388e021a4fc3b11073be5e18cf791e0d"
+    },
+    "www/webpages/locale/en_US/lan.js": {
+      "bytes": 28094,
+      "sha1": "5422faacecb5754cef94d67a392e74890e470c3e",
+      "sha256": "aa931f7ec93bdbf831e9da2e94bd7b1290d61a00c4d1a1d6739011275663f796",
+      "stock_sha1": "b7591d2cbf4b36812af5e8991867b7a7b7c546aa"
+    },
+    "www/webpages/modules/advanced/network/guestVlan/controllers.js": {
+      "bytes": 2041,
+      "sha1": "d3b27fb26ea556f0229704b775031ecbe55a2f11",
+      "sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b"
+    },
+    "www/webpages/modules/advanced/network/guestVlan/models.js": {
+      "bytes": 2160,
+      "sha1": "61814ada1ea493b25806579e0bab6ea1b399988a",
+      "sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6"
+    },
+    "www/webpages/modules/advanced/network/guestVlan/view.html": {
+      "bytes": 1183,
+      "sha1": "ad7d9cfa6a7aa6cf2f06ea03d57f0d3472f8df91",
+      "sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1"
+    },
+    "www/webpages/modules/advanced/network/iotVlan/controllers.js": {
+      "bytes": 5427,
+      "sha1": "250c842a0bd64dad63bf6a924777ce25ae049e1a",
+      "sha256": "487d5e268a097c1d4eb7bbc4ab76a77e55520979423d8bcb82e9d29136822947"
+    },
+    "www/webpages/modules/advanced/network/iotVlan/models.js": {
+      "bytes": 4239,
+      "sha1": "c0fd6d77d24e101e7c59df2b35a2e132671d63e7",
+      "sha256": "a6b9ce94c8543e57d86e78c3ad74f269a0932cad7018839f96541644e9f32ee8"
+    },
+    "www/webpages/modules/advanced/network/iotVlan/view.html": {
+      "bytes": 1481,
+      "sha1": "3581e8b6a01cdc93e67f076bb637f6ff72dabffb",
+      "sha256": "ad781a8b31723238979738f77bce9e2dac8f7f66891e8f746f071a4156690740"
+    }
+  },
+  "cache": {
+    "installed": {
+      "bytes": 17534,
+      "sha1": "84b27c89fa6fa92384f90997743dfa737e3437f7",
+      "sha256": "2b92a47a81b66de702daf0215319b1004f8b46b78a9bf5bac79f2b4f3c6d8d4b"
+    },
+    "stock": {
+      "bytes": 16411,
+      "sha1": "a64a38e0eec035ff957659e7950a47bd92fd043a",
+      "sha256": "ce8fde4a2533d621b87c0d4ffde177b2d62818545fc10c3cd2665a278b0501c9"
+    }
+  },
+  "device_id": "@MAIN_DEVICE_ID@",
+  "kind": "deco_main_readonly_ui_boot",
+  "package_manifest_sha256": "b1ae6552aa58d69334137748f055f655b86726a7206548f0603438256679ab3e",
+  "role": "main",
+  "schema": 1,
+  "stock_trees": {
+    "admin": {
+      "administration.lua": {
+        "bytes": 17986,
+        "sha1": "c1d9c204ad3b88d63ba5b872640a96722cec5922",
+        "sha256": "f8b6bc3fb96d38321addc46e0fe14e2d2f7ab5f6bbfad32ee9b9e5c5cd1525f0",
+        "type": "reg"
+      },
+      "client.lua": {
+        "bytes": 9138,
+        "sha1": "ebc49b0b4d32ab80e8aafd6802ebc346c9eca331",
+        "sha256": "e94b8e65a96da805fa43705dc6c6f23727544fe31790d1af507ae0cbe0ead363",
+        "type": "reg"
+      },
+      "cloud.lua": {
+        "bytes": 45428,
+        "sha1": "ff06f9917c90e23936c67b401c94f4f616dc7151",
+        "sha256": "ce30e7bb85b728840bf408052eab3226c872227a00838cb2721eb7dfd328de7c",
+        "type": "reg"
+      },
+      "cloud_account.lua": {
+        "bytes": 9503,
+        "sha1": "bbad488c46f0cb4c8a7e02ceb80f31d4dfbdb6bc",
+        "sha256": "be79c12b549ce032033cc452b59462c484ff6d2cdc5aeb38132a2e2a50d34f28",
+        "type": "reg"
+      },
+      "component_control.lua": {
+        "bytes": 1007,
+        "sha1": "3481eb34af5d700193b8d6c063133f8ec269dc09",
+        "sha256": "1cebe006378ba954ed7365642d87bcb533c6854380ccbcae253dda4067c277a3",
+        "type": "reg"
+      },
+      "conn-indicator.lua": {
+        "bytes": 1262,
+        "sha1": "ab45a56ecce8fda954387cfef9fd473bc6263426",
+        "sha256": "3d1325f5720a814c377218c7d9583c9855ff2ee57567237099bef3671f1c2461",
+        "type": "reg"
+      },
+      "debug.lua": {
+        "bytes": 785,
+        "sha1": "a2e2d74389fa10f919db9db5b8389e0f0a7730b9",
+        "sha256": "34632182ea189709d4017166a85c83d701a5827d11f731fe4cbb0826d59d4140",
+        "type": "reg"
+      },
+      "device.lua": {
+        "bytes": 31871,
+        "sha1": "f173298246df71c90fc947a0366500f9550891c9",
+        "sha256": "dfc54252da8967464eb03365138ba53db4b68efae47a720a0d140f293650cc8c",
+        "type": "reg"
+      },
+      "firmware.lua": {
+        "bytes": 7882,
+        "sha1": "328c0eaeb051788a168ba3c020598ac19a16a492",
+        "sha256": "e7ad071e9a94abbf0e45b93c54da35024d0b1210686937366797c94899101dbb",
+        "type": "reg"
+      },
+      "index.lua": {
+        "bytes": 526,
+        "sha1": "d26b61de1f69e66c66679cc906c53ea6e452db58",
+        "sha256": "d8fd844d24e722e6bf68bb7dde5d057fe1836db754d12679b07fea581dd2fa0b",
+        "type": "reg"
+      },
+      "log_export.lua": {
+        "bytes": 3420,
+        "sha1": "a01be645eb8578325ee6e5e8c5790fe16677a1d5",
+        "sha256": "bf9ef013cce1bd1f46bf6b0697a0ca96b08c2939ff5f7a89a4a2b3da4d7f8445",
+        "type": "reg"
+      },
+      "mobile_app": {
+        "type": "dir"
+      },
+      "mobile_app/auto_test.lua": {
+        "bytes": 10093,
+        "sha1": "132fa67f22be7bc6e51cd95e260bcb921a95ec96",
+        "sha256": "78923704737f024ba0eaede8ef9c01a8d8ad930e15322f2d7c9712768a04ddfb",
+        "type": "reg"
+      },
+      "mobile_app/camera_security.lua": {
+        "bytes": 13365,
+        "sha1": "9d4fc1d77cc5743e3e477c946e98d8ea31892bd4",
+        "sha256": "cc31eb3488e07f166c26da5fe83488e009625e4b832a52297fbd97e5e1ad5698",
+        "type": "reg"
+      },
+      "mobile_app/client.lua": {
+        "bytes": 25286,
+        "sha1": "12ba446ef7d2c78f00ccbf2234fe859f14260633",
+        "sha256": "42b00971ec97c82c0a90143cc026d0753421f92e7a4a5221ef97c0cc2c34a95d",
+        "type": "reg"
+      },
+      "mobile_app/cloud.lua": {
+        "bytes": 39706,
+        "sha1": "4294f26ebca99614e4a43653a2280160db8f8084",
+        "sha256": "657e0dfb463d608d65bfeca80459cd998a2d7f1a498d06720c07148881130bc7",
+        "type": "reg"
+      },
+      "mobile_app/component_list.lua": {
+        "bytes": 11700,
+        "sha1": "d924b0fec9e4c883aafa36fb8313fd6967c7daa9",
+        "sha256": "f0da0a6f2890b6a73684c8edb9586e902e7a26fe58b60209aced64f5318c4f79",
+        "type": "reg"
+      },
+      "mobile_app/cwmp.lua": {
+        "bytes": 1098,
+        "sha1": "06609486c4532ee3ad0d335a37c4f124d2ab2b55",
+        "sha256": "e8a3f2cb5480de5e9189917b6fe8e533796ef722a0a79e1bf3645d0ed2b20a08",
+        "type": "reg"
+      },
+      "mobile_app/ddns.lua": {
+        "bytes": 8813,
+        "sha1": "821f2e0ddb334516db5f74de054e977271681d03",
+        "sha256": "4536a4185d26bf83ddbfdbb6d47e7cc057f4f9012778a0d92b3c0980df765d9f",
+        "type": "reg"
+      },
+      "mobile_app/debug.lua": {
+        "bytes": 4379,
+        "sha1": "93ad5294434c8139fae59099a1b00be243a10074",
+        "sha256": "908b930b34ac437abda9839cd6f5d2684a22dd97a346409df9a3313ec66b44d3",
+        "type": "reg"
+      },
+      "mobile_app/device.lua": {
+        "bytes": 67103,
+        "sha1": "b0a2c1d0eda32f063e4883086f68c4d7e4187bd0",
+        "sha256": "f9cb91a392014fd7b30fac86c68a0b68557282d2913ee5bc823fe2751b4f6791",
+        "type": "reg"
+      },
+      "mobile_app/dhcp.lua": {
+        "bytes": 5683,
+        "sha1": "46488d33c12f9137b51401d8d643ffc9dace154a",
+        "sha256": "601606e54a16551e55b66145e5b41127ff22d3e8fc18c36baf4a7329ce737fd9",
+        "type": "reg"
+      },
+      "mobile_app/ga_info.lua": {
+        "bytes": 3357,
+        "sha1": "8c0272c6528197667da7af90439682049f10b1cf",
+        "sha256": "21b78fd5f379247c2e19e5935ca84af05e377306c2c999be44a7bfb93e91fec5",
+        "type": "reg"
+      },
+      "mobile_app/iot_automation.lua": {
+        "bytes": 51364,
+        "sha1": "0e278eab29572063930779bbd21e0e8e875da613",
+        "sha256": "cf64149e565cd1f9955794b071afc473d00965571b0981d93b4aae276a39488d",
+        "type": "reg"
+      },
+      "mobile_app/iot_client_mesh.lua": {
+        "bytes": 2350,
+        "sha1": "44799cf7a998859d576826afcefe1047e351b887",
+        "sha256": "2b74d5be87a167d0c50b39fc432eb8b4ba64732a0487fed92df91e8b8f16323a",
+        "type": "reg"
+      },
+      "mobile_app/iot_cloud.lua": {
+        "bytes": 919,
+        "sha1": "ddfc8e1e29f6fed9310e8be3f5279c194b73c233",
+        "sha256": "82010d375a6ffd4e25af578148974498bd041b94421975ef49afbecc177d2d8f",
+        "type": "reg"
+      },
+      "mobile_app/iot_device.lua": {
+        "bytes": 72085,
+        "sha1": "ffda57d8359b09051e8e56f19da1d9029963d7e5",
+        "sha256": "4591cbf37aa7d239f56cbbacb1268201c8515f12e10c7090c17457bad550c702",
+        "type": "reg"
+      },
+      "mobile_app/iptv.lua": {
+        "bytes": 11073,
+        "sha1": "91d3340b524b99a4a696d80162eb3dff25eb3d1f",
+        "sha256": "ac195a8d9bb86226dd9a19fc8bdde00e793b7e6c0fd614a55a9ecda4e0b99da8",
+        "type": "reg"
+      },
+      "mobile_app/ipv6_firewall.lua": {
+        "bytes": 8145,
+        "sha1": "b6c97706628eed69ac1acda1ef6cb693aa3de873",
+        "sha256": "b603fcfc44b4ac7774ca2c58060ec68314da8f947ad55aee2570ffe782f1b1fa",
+        "type": "reg"
+      },
+      "mobile_app/log.lua": {
+        "bytes": 1630,
+        "sha1": "2797cb80f0db06f68f93d6540de6e29ae8325271",
+        "sha256": "a1e68bffba269451fb3aa3cd5eecddb9f1400575bb897f3e0e4f05acab77ac2a",
+        "type": "reg"
+      },
+      "mobile_app/log_export.lua": {
+        "bytes": 2675,
+        "sha1": "67a96a9e529fecdf11adc9e59c5ac313608f144d",
+        "sha256": "8f49075b2abd06de506316572853bf5cce59552fc849ab7c5eba337bd1bb0d65",
+        "type": "reg"
+      },
+      "mobile_app/msg_server.lua": {
+        "bytes": 2007,
+        "sha1": "18192bbf3a2e32ebe81ee09e6d24a043524f26c1",
+        "sha256": "13a248d1d0a5ebd986afb80985d34f049c20be096ea873c2c83fbc153a11ae9c",
+        "type": "reg"
+      },
+      "mobile_app/nat.lua": {
+        "bytes": 10123,
+        "sha1": "6b6fd9163fc0afcc89f2becdced8ac2ca4875b1a",
+        "sha256": "6c02a3f08e14285dd9547c9e68b9dc432414b89c6188aa03521bc9d04e7f612e",
+        "type": "reg"
+      },
+      "mobile_app/network.lua": {
+        "bytes": 45209,
+        "sha1": "982552192a31da7588476799a4560023e44eb739",
+        "sha256": "b0c398d4bcc4338170519b024121ad52ee3a8c5cabdbd016cff17ab6d2acb718",
+        "type": "reg"
+      },
+      "mobile_app/network_optimize.lua": {
+        "bytes": 6277,
+        "sha1": "b717a272653fff0d57a3eae63c94202318ec0e52",
+        "sha256": "e1db58b3defb78daa533cd3fe5e5a08c746721e24ed025af160229140348f08d",
+        "type": "reg"
+      },
+      "mobile_app/nrd.lua": {
+        "bytes": 1780,
+        "sha1": "cf71b71cca3b3f5f27c9216ba70d0931d80c631d",
+        "sha256": "94e1b88abff0506dc2fad57f4b31647e76e5129e4d6795388910d9039f78ecc5",
+        "type": "reg"
+      },
+      "mobile_app/privacy_policy.lua": {
+        "bytes": 2955,
+        "sha1": "5c32e2ba6c862e4b8708c0d8696d9605a569a026",
+        "sha256": "36d5cf980175d113735c7eb9ab04bdbaa0c37f80a14c59783fee480a73f81cd8",
+        "type": "reg"
+      },
+      "mobile_app/quick_setup.lua": {
+        "bytes": 41179,
+        "sha1": "87be0f79aa282469f703bd91db6c68760939d9ed",
+        "sha256": "2b046b5907895ce97d420874a4472e6e28661b1f719f12c326812642fdf55945",
+        "type": "reg"
+      },
+      "mobile_app/security.lua": {
+        "bytes": 2123,
+        "sha1": "3eeaefc43dbafb7f4d87880a02e82c83a1e4e1c1",
+        "sha256": "916b014e101590a476f8a79f56efd176e1a126ded3559dcb332fffebc6c31e32",
+        "type": "reg"
+      },
+      "mobile_app/smart_network.lua": {
+        "bytes": 16641,
+        "sha1": "d4483a4be7a5ec249bed4e34d9b2bbd2869b120a",
+        "sha256": "d85ef9a3250730c5529efbef834f28b444868f408a2f0a8705b2e3355ef4ee75",
+        "type": "reg"
+      },
+      "mobile_app/telemetry_collect.lua": {
+        "bytes": 3615,
+        "sha1": "eb63e478aca8f8c9cddb5d53351d11b4ac26d07b",
+        "sha256": "0e4833ccb14f27e554bd63c10d16f4e00175d90ccd023c8d5fee2480e3297a92",
+        "type": "reg"
+      },
+      "mobile_app/vpn_client.lua": {
+        "bytes": 28279,
+        "sha1": "5b6606f20ddc8ac657832f927c37c2c891a53b40",
+        "sha256": "59f4d06cf0d7dc6129eaf0c236543d3f8b7a57e9051a47436df54700bbcb64dc",
+        "type": "reg"
+      },
+      "mobile_app/vpn_server.lua": {
+        "bytes": 11328,
+        "sha1": "d8c4ff73a397fa3acb310c459a003b511121f94c",
+        "sha256": "1fe62409e3cf2a006f7e8a2445230088fa8f6527a5a0974a3eaf0e5c097de467",
+        "type": "reg"
+      },
+      "mobile_app/vpnconn.lua": {
+        "bytes": 4186,
+        "sha1": "c73e2c2861578e127272174bcc6d4f5a8c38ad91",
+        "sha256": "5eb5c08bae1742356aac766ae140494342fdbed599d5b1b309a5bf2bcc503054",
+        "type": "reg"
+      },
+      "mobile_app/wireless.lua": {
+        "bytes": 33232,
+        "sha1": "54524c98ec9718cc7d2cf6420a9744f12efa166e",
+        "sha256": "c63218af8dd750632ff1d91930ff643e88da27fdbc3c2bfc756de661eb8a2544",
+        "type": "reg"
+      },
+      "mobile_app/wps.lua": {
+        "bytes": 3864,
+        "sha1": "eb535c1ebbe2738a01859ce3ed7d255fe4d5b2e8",
+        "sha256": "50281086e04755bda3c46841c3c7b819ee0c8adcfdbb5b4ed4e42ffc3a3b7030",
+        "type": "reg"
+      },
+      "network.lua": {
+        "bytes": 37837,
+        "sha1": "7a10b1145c809013f90cf13ef61a50eba37264bb",
+        "sha256": "638c07c7165b31bf6175a89c96c0ec632002aff4d11eb10b406af88dc359d49c",
+        "type": "reg"
+      },
+      "op_manager.lua": {
+        "bytes": 12443,
+        "sha1": "1e764be9753deee4afff4353adb2701c1c4f6573",
+        "sha256": "1bdb1f6a5f7f63574715a6ca152e1c7e20cf950fa261d170ac77cbd57c9dbf76",
+        "type": "reg"
+      },
+      "re_disconnect_cloud.lua": {
+        "bytes": 876,
+        "sha1": "e23f27c56bf15e38eb21a5a35b6eaab87cb6bf8f",
+        "sha256": "52fdd36bfe88c159dd725625fdcd3aedd5b2c61891c4e9af5b85942a9b8c0a6d",
+        "type": "reg"
+      },
+      "route.lua": {
+        "bytes": 7285,
+        "sha1": "51d7f25bbfac6a4f1fac68051f6f2d2bf99e0df5",
+        "sha256": "34f60872e732023efd2cf6a76b34fd4b3c74188706d00a7d5840a3639d4b3d34",
+        "type": "reg"
+      },
+      "sync.lua": {
+        "bytes": 44570,
+        "sha1": "8838c45664daf25172d2ab5dc7a015e45a603930",
+        "sha256": "6de5721a78ef064abc4c87f28940f77d72778f501b33604a3c5a9956fe342e2c",
+        "type": "reg"
+      },
+      "system.lua": {
+        "bytes": 2555,
+        "sha1": "07f429286e3074583c6655cbaee27595526fcda2",
+        "sha256": "5372d035e89c629b19e90294b698f6aa468f6661359f9870426282519d7f771c",
+        "type": "reg"
+      },
+      "time_setting.lua": {
+        "bytes": 767,
+        "sha1": "a89674e9d125254c58be536a9f80daf8eb828815",
+        "sha256": "db3508c3c6286e913c340bffe120fb8c46cef0e0c0a0d457ef4985d5e4535453",
+        "type": "reg"
+      },
+      "tipc-controller.lua": {
+        "bytes": 1147,
+        "sha1": "873e373608c1ba3b7589a26b4c509333cedc8eee",
+        "sha256": "2870ca80eb9c9368b04d7cdd71e07505cc9fd558045c56a4490c01a5230de2ce",
+        "type": "reg"
+      },
+      "web.lua": {
+        "bytes": 935,
+        "sha1": "2db87c8e4d7c3bbe6aa3bbbfd113c5894300eb36",
+        "sha256": "3c9f1f85fd368c3e62d826e0802296f6a4a272007e1903bf6faae6bfc945b19e",
+        "type": "reg"
+      },
+      "wifidog.lua": {
+        "bytes": 12670,
+        "sha1": "0b9e23eca3f8f3d0de537375e8a0c58f84c676be",
+        "sha256": "a7981b0f3150ba74a2a63ba63f103296e39c26b9c5c21e55b5d9fe858a6b413b",
+        "type": "reg"
+      },
+      "wireless.lua": {
+        "bytes": 16082,
+        "sha1": "1c526d927c82f2e913bd38d5d7f2d3ed5c5ed779",
+        "sha256": "80e4cad4723652815b074ecf2d6488631f456bf30ef997149581eed76565268e",
+        "type": "reg"
+      },
+      "wpsd.lua": {
+        "bytes": 2339,
+        "sha1": "638414b514041e8e3e67890570f0eed8f7e8e20b",
+        "sha256": "f8f17a86e31038974d21abeeb9337d15a6ddfedf5a0bcfe3c3214c2fecfec708",
+        "type": "reg"
+      }
+    },
+    "network": {
+      "networkStatus": {
+        "type": "dir"
+      },
+      "networkStatus/controllers.js": {
+        "bytes": 6402,
+        "sha1": "139241f62b9b3a5e18c4e773a37b39da849fc4b0",
+        "sha256": "14296d5c3d4b2369b0fa23bfb3ebde67528724ea0cc4dd9f3a8dda6637067ecc",
+        "type": "reg"
+      },
+      "networkStatus/models.js": {
+        "bytes": 11179,
+        "sha1": "00f3d5d60322cdbf24019c4c08c9e7026ae6e1df",
+        "sha256": "74d51a616d2f3e74a12f1e5f3311079da58897508a697a4d652c665b5bd90353",
+        "type": "reg"
+      },
+      "networkStatus/view.html": {
+        "bytes": 10718,
+        "sha1": "a8d92aa73f364082bdf86b50f64e5dc6563ed983",
+        "sha256": "ecc8560e31d6018eb7e0cab103a8385861eed78ab0e3bb68a1e7df7ddc83e322",
+        "type": "reg"
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+--- a/etc_ro/init.d/network
++++ b/etc_ro/init.d/network
+@@ -1,4 +1,41 @@
+ #!/bin/sh /etc/rc.common
++
++# DECO_IOT_MANAGED_HOOKS_BEGIN
++# Own fixed fallback. Real reviewed callbacks replace these definitions below.
++deco_iot_is_managed() {
++    [ -e /etc/config/deco_iot_vlan ] ||
++    [ -e /tmp/deco-iot-managed/installation.json ] ||
++    [ -e /tp_data/user_data/deco-iot-vlan/installation.json ]
++}
++deco_iot_ready() { return 1; }
++deco_iot_owns_vlan() { return 1; }
++deco_iot_owns_network() { return 1; }
++deco_iot_before_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    deco_iot_is_managed || return 0
++    /bin/busybox rm -f /tmp/deco-iot-managed/ready.json || return 1
++    for deco_vap in ath08 ath18; do
++        [ -e "/sys/class/net/$deco_vap/ifindex" ] || continue
++        [ "$(uci -q get "wireless.$deco_vap.type")" = iot ] || return 1
++        /bin/busybox ifconfig "$deco_vap" down || return 1
++        deco_flags=$(/bin/busybox cat "/sys/class/net/$deco_vap/flags") || return 1
++        case "$deco_flags" in 0x*) deco_digits=${deco_flags#0x} ;; *) return 1 ;; esac
++        case "$deco_digits" in ''|*[!0123456789abcdefABCDEF]*) return 1 ;; esac
++        [ "${#deco_digits}" -le 8 ] || return 1
++        [ "$((deco_flags & 1))" -eq 0 ] || return 1
++    done
++    return 0
++}
++deco_iot_before_switch_load() { ! deco_iot_is_managed; }
++deco_iot_after_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    # Missing executor cannot authorize activation or publish readiness.
++    return 0
++}
++[ ! -r /tmp/deco-iot-managed/native_hooks.sh ] ||
++    . /tmp/deco-iot-managed/native_hooks.sh
++
++# DECO_IOT_MANAGED_HOOKS_END
+ #add procd support by wanghao
+ #sync configs from network_sync when procd reload service.
+ 
+@@ -21,6 +58,9 @@
+ 	local eth_num
+ 	id="$(uci get network.vlan.id)"
+ 	config_get name "$1" name
++    if [ "$name" = eth1.30 ] && deco_iot_owns_vlan; then
++        return 0
++    fi
+ 	#echo "delete_vlan_device:start to delete eth0.$id" > /dev/console
+ 	real_dev_name=$(get_sgmac_eth_name)
+ 
+@@ -1291,7 +1331,10 @@
+ }
+ 
+ delete_other_wan_interfaces() {
+-	local sec_name="$1"
++    local sec_name="$1"
++    if [ "$sec_name" = iot ] && deco_iot_owns_network; then
++        return 0
++    fi
+ 	# Any new interface should be added here to avoid being deleted (this is absurb and must be fixed!)
+ 	local interfaces="wan internet wanv6 internetv6 loopback lan guest lanv6 hgw wanb wanbv6"
+ 
+@@ -1306,7 +1349,10 @@
+ }
+ 
+ delete_ewan_mode_interfaces() {
+-	local sec_name="$1"
++    local sec_name="$1"
++    if [ "$sec_name" = iot ] && deco_iot_owns_network; then
++        return 0
++    fi
+ 	local interfaces="wan internet wanv6 internetv6 lanv6"
+ 
+ 	for interface in $interfaces; do
+@@ -1772,6 +1818,12 @@
+ }
+ 
+ start_service() {
++    deco_iot_before_change network || return 1
++    deco_iot_native_start_service "$@" || return 1
++    deco_iot_after_change network || return 1
++}
++
++deco_iot_native_start_service() {
+ 	load_config
+ 
+ 	local pid=""
+@@ -1830,6 +1882,12 @@
+ }
+ 
+ reload_service() {
++    deco_iot_before_change network || return 1
++    deco_iot_native_reload_service "$@" || return 1
++    deco_iot_after_change network || return 1
++}
++
++deco_iot_native_reload_service() {
+ 	#local action="$(uci get network.wan.action)"
+ 	
+ 	#if [ "$action" = "set" ]; then

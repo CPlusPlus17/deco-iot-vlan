@@ -1,0 +1,24 @@
+--- a/www/webpages/config/navigator.json
++++ b/www/webpages/config/navigator.json
+@@ -10,6 +10,14 @@
+             {
+                 "name": "networkStatus",
+                 "text": "STATUS"
++            },
++            {
++                "name": "guestVlan",
++                "text": "VLAN_STATUS"
++            },
++            {
++                "name": "iotVlan",
++                "text": "IOT_VLAN"
+             },
+             {
+                 "name": "system",
+@@ -47,4 +55,4 @@
+             }
+         ]
+     }
+-]
+\ No newline at end of file
++]

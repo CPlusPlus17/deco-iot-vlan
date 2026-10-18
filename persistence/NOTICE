@@ -1,0 +1,23 @@
+deco-iot-vlan persistence source alpha
+
+The authored persistence modules and UI extensions are experimental source code.
+The vendor-patches files describe modifications to source shipped with TP-Link
+Deco firmware. Eleven inputs use unified patches; the minified locale uses
+compact byte edits containing only newly inserted text. Complete stock-derived
+scripts/UI config files are not included.
+Original file notices remain in the owner's required stock inputs and patches,
+including Copyright (C) 2006 OpenWrt.org, Copyright (C) 2009-2010 OpenWrt.org,
+and Copyright (c) 2014 TP-LINK Technologies Co., Ltd., All Rights Reserved.
+This alpha does not replace or remove those notices or grant rights to upstream
+components beyond their applicable terms. New original work by the project's
+contributors is MIT licensed; see LICENSES/MIT.txt and LICENSES/README.md for scope.
+
+No TP-Link firmware image, compiled LuCI module, route-cache binary, private
+profile, device credential, installation receipt, or diagnostic trace is included.
+Stock-source hashes in the UI metadata describe required device-side files;
+they are not embedded copies or proof that an arbitrary device matches.
+
+The public UI uses generic node labels and a zero-valued historical migration
+sentinel. Those release-specific changes are recorded in source-inventory.json.
+The production guest hooks are included; temporary Keller diagnostic trace hooks
+are excluded. This package makes no guest VLAN591 repair claim.

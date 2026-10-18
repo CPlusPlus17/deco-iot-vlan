@@ -1,0 +1,2 @@
+# Unified patch context preserves the exact stock file's tabs and blank lines.
+persistence/vendor-patches/**/*.patch -whitespace

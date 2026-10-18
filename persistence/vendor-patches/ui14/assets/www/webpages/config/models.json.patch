@@ -1,0 +1,13 @@
+--- a/www/webpages/config/models.json
++++ b/www/webpages/config/models.json
+@@ -48,5 +48,7 @@
+   "igmpFeatureM": "./modules/advanced/system/sysParams/models.js",
+   "fastXmitModel": "./modules/advanced/system/sysParams/models.js",
+   "flowCtrlModel": "./modules/advanced/system/sysParams/models.js",
+-  "newTxPowerModel": "./modules/advanced/system/sysParams/models.js"
+-}
+\ No newline at end of file
++  "newTxPowerModel": "./modules/advanced/system/sysParams/models.js",
++  "guestVlanStatus": "./modules/advanced/network/guestVlan/models.js",
++  "iotVlanStatus": "./modules/advanced/network/iotVlan/models.js"
++}

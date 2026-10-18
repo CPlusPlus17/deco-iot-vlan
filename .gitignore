@@ -3,3 +3,11 @@ __pycache__/
 *.luac
 *.bin
 .DS_Store
+
+# Owner-specific profiles and generated alpha payloads stay local.
+*.local.json
+.env
+.env.*
+profiles/private/
+persistence/dist/
+persistence/build/

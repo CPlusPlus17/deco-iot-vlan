@@ -1,0 +1,78 @@
+--- a/lib/wifi/wificommon.sh
++++ b/lib/wifi/wificommon.sh
+@@ -1,4 +1,41 @@
+ #!/bin/sh
++
++# DECO_IOT_MANAGED_HOOKS_BEGIN
++# Own fixed fallback. Real reviewed callbacks replace these definitions below.
++deco_iot_is_managed() {
++    [ -e /etc/config/deco_iot_vlan ] ||
++    [ -e /tmp/deco-iot-managed/installation.json ] ||
++    [ -e /tp_data/user_data/deco-iot-vlan/installation.json ]
++}
++deco_iot_ready() { return 1; }
++deco_iot_owns_vlan() { return 1; }
++deco_iot_owns_network() { return 1; }
++deco_iot_before_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    deco_iot_is_managed || return 0
++    /bin/busybox rm -f /tmp/deco-iot-managed/ready.json || return 1
++    for deco_vap in ath08 ath18; do
++        [ -e "/sys/class/net/$deco_vap/ifindex" ] || continue
++        [ "$(uci -q get "wireless.$deco_vap.type")" = iot ] || return 1
++        /bin/busybox ifconfig "$deco_vap" down || return 1
++        deco_flags=$(/bin/busybox cat "/sys/class/net/$deco_vap/flags") || return 1
++        case "$deco_flags" in 0x*) deco_digits=${deco_flags#0x} ;; *) return 1 ;; esac
++        case "$deco_digits" in ''|*[!0123456789abcdefABCDEF]*) return 1 ;; esac
++        [ "${#deco_digits}" -le 8 ] || return 1
++        [ "$((deco_flags & 1))" -eq 0 ] || return 1
++    done
++    return 0
++}
++deco_iot_before_switch_load() { ! deco_iot_is_managed; }
++deco_iot_after_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    # Missing executor cannot authorize activation or publish readiness.
++    return 0
++}
++[ ! -r /tmp/deco-iot-managed/native_hooks.sh ] ||
++    . /tmp/deco-iot-managed/native_hooks.sh
++
++# DECO_IOT_MANAGED_HOOKS_END
+ #
+ #
+ #
+@@ -648,8 +685,23 @@
+ 
+     elif [ "$mode" = "ap" -a "$vaptype" = "iot" ]; then
+         uci_set wireless $section ssid "$iotssid"
+-        uci_set wireless $section network "lan"
+         config_get device $section device
++        if deco_iot_is_managed; then
++            # Native overall enable stays0; only our own committed ready state
++            # may generate an enabled VAP, always on the private network.
++            uci_set wireless $section network "iot"
++            uci_set wireless $section disabled 1
++            deco_native_enable=$(uci -q get iot_wifi.iot.enable)
++            deco_band_enable=0
++            case "$device" in
++                wifi0) deco_band_enable=$(uci -q get iot_wifi.iot.enable_2g) ;;
++                wifi2) deco_band_enable=$(uci -q get iot_wifi.iot.enable_5g) ;;
++            esac
++            if [ "$deco_native_enable" = 0 ] && [ "$deco_band_enable" = 1 ] && deco_iot_ready; then
++                uci_set wireless $section disabled 0
++            fi
++        else
++            uci_set wireless $section network "lan"
+         if [ "$iotenable" = 1 ]; then
+             if [ "$device" = "wifi0" ]; then
+                 if [ "$iotenable_2g" = 0 ]; then
+@@ -672,6 +724,8 @@
+             wificommon_echo "iot disabled "
+             uci_set wireless $section disabled 1
+         fi
++
++        fi # own managed/unmanaged network generation
+ 
+         if [ "$iotencry" = "0" ]; then
+             uci_set wireless $section encryption "none"

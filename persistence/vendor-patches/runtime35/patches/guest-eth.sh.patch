@@ -1,0 +1,189 @@
+--- a/lib/guest-eth/guest-eth.sh
++++ b/lib/guest-eth/guest-eth.sh
+@@ -1,4 +1,41 @@
+ #!/bin/sh
++
++# DECO_IOT_MANAGED_HOOKS_BEGIN
++# Own fixed fallback. Real reviewed callbacks replace these definitions below.
++deco_iot_is_managed() {
++    [ -e /etc/config/deco_iot_vlan ] ||
++    [ -e /tmp/deco-iot-managed/installation.json ] ||
++    [ -e /tp_data/user_data/deco-iot-vlan/installation.json ]
++}
++deco_iot_ready() { return 1; }
++deco_iot_owns_vlan() { return 1; }
++deco_iot_owns_network() { return 1; }
++deco_iot_before_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    deco_iot_is_managed || return 0
++    /bin/busybox rm -f /tmp/deco-iot-managed/ready.json || return 1
++    for deco_vap in ath08 ath18; do
++        [ -e "/sys/class/net/$deco_vap/ifindex" ] || continue
++        [ "$(uci -q get "wireless.$deco_vap.type")" = iot ] || return 1
++        /bin/busybox ifconfig "$deco_vap" down || return 1
++        deco_flags=$(/bin/busybox cat "/sys/class/net/$deco_vap/flags") || return 1
++        case "$deco_flags" in 0x*) deco_digits=${deco_flags#0x} ;; *) return 1 ;; esac
++        case "$deco_digits" in ''|*[!0123456789abcdefABCDEF]*) return 1 ;; esac
++        [ "${#deco_digits}" -le 8 ] || return 1
++        [ "$((deco_flags & 1))" -eq 0 ] || return 1
++    done
++    return 0
++}
++deco_iot_before_switch_load() { ! deco_iot_is_managed; }
++deco_iot_after_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    # Missing executor cannot authorize activation or publish readiness.
++    return 0
++}
++[ ! -r /tmp/deco-iot-managed/native_hooks.sh ] ||
++    . /tmp/deco-iot-managed/native_hooks.sh
++
++# DECO_IOT_MANAGED_HOOKS_END
+ 
+ . /usr/lib/eth-encap/eth_encap.sh
+ [ -f "/lib/switch/core.sh" ] && . /lib/switch/core.sh
+@@ -26,6 +63,16 @@
+ }
+ 
+ add_guest_vlan_entry() {
++    deco_iot_before_change guest || return 1
++    local deco_iot_guest_native_status=0 deco_iot_guest_after_status=0
++    deco_iot_native_add_guest_vlan_entry "$@" || deco_iot_guest_native_status=$?
++    deco_iot_after_change guest || deco_iot_guest_after_status=$?
++    [ "$deco_iot_guest_native_status" -eq 0 ] || return "$deco_iot_guest_native_status"
++    [ "$deco_iot_guest_after_status" -eq 0 ] || return 1
++    return 0
++}
++
++deco_iot_native_add_guest_vlan_entry() {
+ 
+     if [ -n "$switch_rtl8367s" ] || [ -n "$switch_mtk" ]; then
+ 
+@@ -61,7 +108,12 @@
+         if [ -n "$switch_mtk" ]; then
+             swconfig_mtk load
+         elif [ -x "/sbin/swconfig" ]; then
+-            swconfig dev $switch_name load /etc/vlan.d/vlan
++            if ! deco_iot_before_switch_load; then
++                return 1
++            fi
++            if ! swconfig dev $switch_name load /etc/vlan.d/vlan; then
++                return 1
++            fi
+         fi
+     else
+ 
+@@ -76,12 +128,27 @@
+         uci -c /etc/vlan.d set vlan.guest.ports="0t"
+ 
+         uci commit -c /etc/vlan.d
+-        swconfig dev $switch_name load /etc/vlan.d/vlan
++        if ! deco_iot_before_switch_load; then
++            return 1
++        fi
++        if ! swconfig dev $switch_name load /etc/vlan.d/vlan; then
++            return 1
++        fi
+ 
+     fi
+ }
+ 
+ del_invalid_guest_eth() {
++    deco_iot_before_change guest || return 1
++    local deco_iot_guest_native_status=0 deco_iot_guest_after_status=0
++    deco_iot_native_del_invalid_guest_eth "$@" || deco_iot_guest_native_status=$?
++    deco_iot_after_change guest || deco_iot_guest_after_status=$?
++    [ "$deco_iot_guest_native_status" -eq 0 ] || return "$deco_iot_guest_native_status"
++    [ "$deco_iot_guest_after_status" -eq 0 ] || return 1
++    return 0
++}
++
++deco_iot_native_del_invalid_guest_eth() {
+ 
+     local ifnames
+     local vlan_id
+@@ -146,6 +213,10 @@
+     echo "!!!!!!!!!!!!!! eth_vlan_ifaces:" "$eth_vlan_ifaces" > /dev/console
+ 
+     for eth_iface in $eth_vlan_ifaces; do
++        # No wildcard exemption: a fresh own-identity check must own this exact device.
++        if [ "$eth_iface" = eth1.30 ] && deco_iot_owns_vlan; then
++            continue
++        fi
+         result=$(echo $ifnames | grep "$eth_iface")
+         echo "!!!!!!!! result" "$result" > /dev/console
+         if [ -z "$result" ]; then
+@@ -169,6 +240,16 @@
+ }
+ 
+ switch_guest_config() {
++    deco_iot_before_change guest || return 1
++    local deco_iot_guest_native_status=0 deco_iot_guest_after_status=0
++    deco_iot_native_switch_guest_config "$@" || deco_iot_guest_native_status=$?
++    deco_iot_after_change guest || deco_iot_guest_after_status=$?
++    [ "$deco_iot_guest_native_status" -eq 0 ] || return "$deco_iot_guest_native_status"
++    [ "$deco_iot_guest_after_status" -eq 0 ] || return 1
++    return 0
++}
++
++deco_iot_native_switch_guest_config() {
+     local device_type=$1
+     local vlan_enable=$2
+     local vlan_id=$3
+@@ -240,7 +321,10 @@
+             done
+         fi
+ 	echo "we get guest_ports $guest_ports" > /dev/console
+-        add_guest_vlan_entry $vlan_id "$guest_ports"
++        if ! add_guest_vlan_entry $vlan_id "$guest_ports"; then
++            lock -u /var/run/vlan.lock
++            return 1
++        fi
+         
+         if [ -z "$wan_dev" ] && [ "$system_mode" != "AP" ]; then
+             del_invalid_guest_eth
+@@ -336,7 +420,10 @@
+     
+             ssdk_sh portVlan ingress set 2 check
+         else
+-            add_guest_vlan_entry $vlan_id
++            if ! add_guest_vlan_entry $vlan_id; then
++                lock -u /var/run/vlan.lock
++                return 1
++            fi
+             hnat_restart
+             ssdk_sh fdb entry flush 1
+             ssdk_sh fdb portLearn set 0 disable
+@@ -368,6 +455,16 @@
+ }
+ 
+ switch_guest_clear() {
++    deco_iot_before_change guest || return 1
++    local deco_iot_guest_native_status=0 deco_iot_guest_after_status=0
++    deco_iot_native_switch_guest_clear "$@" || deco_iot_guest_native_status=$?
++    deco_iot_after_change guest || deco_iot_guest_after_status=$?
++    [ "$deco_iot_guest_native_status" -eq 0 ] || return "$deco_iot_guest_native_status"
++    [ "$deco_iot_guest_after_status" -eq 0 ] || return 1
++    return 0
++}
++
++deco_iot_native_switch_guest_clear() {
+     
+     switch_name=$(uci -c /etc/vlan.d get vlan.@switch[0].name)
+ 
+@@ -379,7 +476,14 @@
+     if [ -n "$switch_mtk" ]; then
+         swconfig_mtk load
+     else
+-        swconfig dev $switch_name load /etc/vlan.d/vlan
++        if ! deco_iot_before_switch_load; then
++            lock -u /var/run/vlan.lock
++            return 1
++        fi
++        if ! swconfig dev $switch_name load /etc/vlan.d/vlan; then
++            lock -u /var/run/vlan.lock
++            return 1
++        fi
+     fi
+     del_invalid_guest_eth "lan" "none"
+ 

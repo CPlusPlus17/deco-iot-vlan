@@ -1,0 +1,110 @@
+{
+  "target": "XE75 Pro V3 1.5.0 Build 20260603 Rel. 15804",
+  "generation": 3,
+  "previous_manifest_sha256": "c840934feee3f9d1eafede9b078e2fd802a96b896eb7294ff226a421fd04267d",
+  "scope": "Main native UI controls the fixed three-unit backend",
+  "device_contact": false,
+  "deployment_requires_actual_backend_tests": true,
+  "persistence_claimed": false,
+  "files": [
+    {
+      "path": "usr/lib/lua/luci/controller/admin/vlan_status.lua",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "7e97f4fb321145776f8631d5ed165aa51b696cf2c7a296c92d2d9d234582ccd2",
+      "bytes": 21225,
+      "previous_sha256": "b2ba546c9c15c52b385c2382690af566a86519a5fd7511d747e1bcf606e8a7a0"
+    },
+    {
+      "path": "www/webpages/config/models.json",
+      "new": false,
+      "stock_sha256": "1bcb0aee24dcc21f9d4e945dad8b98192c3e48a972356b9f6ce1a298b2ef1eef",
+      "patched_sha256": "055e3ea287c9b2287926cfc2ed3598112fad6b075fbe0376dd6997d6879e8e08",
+      "bytes": 3428,
+      "previous_sha256": "055e3ea287c9b2287926cfc2ed3598112fad6b075fbe0376dd6997d6879e8e08"
+    },
+    {
+      "path": "www/webpages/config/modules.json",
+      "new": false,
+      "stock_sha256": "9a0e16e24c9e9387566cfab3d6e4bb9f68f8fb54b90f89b4bb5d163e622654ec",
+      "patched_sha256": "618b8d72814f66e3add2dbae9cc29b98b75421072ed5d85a146af668090ea6a5",
+      "bytes": 3271,
+      "previous_sha256": "618b8d72814f66e3add2dbae9cc29b98b75421072ed5d85a146af668090ea6a5"
+    },
+    {
+      "path": "www/webpages/config/navigator.ap.json",
+      "new": false,
+      "stock_sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35",
+      "patched_sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533",
+      "bytes": 1564,
+      "previous_sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+    },
+    {
+      "path": "www/webpages/config/navigator.json",
+      "new": false,
+      "stock_sha256": "8d0b1d0f5e985f54ebd24b19313314b57b9bd3fe0d8541df3a8695ba44096a35",
+      "patched_sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533",
+      "bytes": 1564,
+      "previous_sha256": "2ee0a6155c8f1e1e5784dbd8c93119ccd48450355dfee15979955603b421d533"
+    },
+    {
+      "path": "www/webpages/locale/en_US/lan.js",
+      "new": false,
+      "stock_sha256": "899039430964d3ea91be22e4b73dc134c77ec34595ba8329de923c68ff79ccde",
+      "patched_sha256": "aa931f7ec93bdbf831e9da2e94bd7b1290d61a00c4d1a1d6739011275663f796",
+      "bytes": 28094,
+      "previous_sha256": "ce9faf6b61076c2603d36ccca80f1a90c88472de62a2ec243e96790c8e61ab54"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/controllers.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b",
+      "bytes": 2041,
+      "previous_sha256": "a62696931fd27f826921062e4e49c87de9a686b1fa520f7ecfe0b1e601d8e16b"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/models.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6",
+      "bytes": 2160,
+      "previous_sha256": "51d2d9b2b55fd2fa8adca3e6db25df59d5680b2c558d174b006868ae1b4819f6"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/guestVlan/view.html",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1",
+      "bytes": 1183,
+      "previous_sha256": "8234ed3e6ff3941abb6d4e82be59db102852db7f7b09b0e4213e349829aceeb1"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/iotVlan/controllers.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "487d5e268a097c1d4eb7bbc4ab76a77e55520979423d8bcb82e9d29136822947",
+      "bytes": 5427,
+      "previous_sha256": "c4a585820b533b646c9668a0493596ec2977e2288f501b9ee04e8f8aead11fc8"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/iotVlan/models.js",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "a6b9ce94c8543e57d86e78c3ad74f269a0932cad7018839f96541644e9f32ee8",
+      "bytes": 4239,
+      "previous_sha256": "fc04f8fed5cd06269f722e0c883037888b3d75bf039ac052a920158b418afced"
+    },
+    {
+      "path": "www/webpages/modules/advanced/network/iotVlan/view.html",
+      "new": true,
+      "stock_sha256": null,
+      "patched_sha256": "ad781a8b31723238979738f77bce9e2dac8f7f66891e8f746f071a4156690740",
+      "bytes": 1481,
+      "previous_sha256": "035b888f1b43f33b2987e630385f9009ed9235d5f89256e33ef835553ee8ed7c"
+    }
+  ],
+  "purpose": "Native authenticated fixed async three-node IoT VLAN30 control candidate; activation gated by actual backend proofs",
+  "source_candidate_manifest_sha256": "b064bb4a7d4c0ad75f7d4e0b582b90acf0ccad01b32c0486bd41419d94c78b68",
+  "async_write_jobs": true
+}

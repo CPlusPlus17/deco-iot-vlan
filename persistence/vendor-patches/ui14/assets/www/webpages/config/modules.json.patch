@@ -1,0 +1,18 @@
+--- a/www/webpages/config/modules.json
++++ b/www/webpages/config/modules.json
+@@ -84,5 +84,13 @@
+   "backupRestore": {
+     "controller": "./modules/advanced/system/backupRestore/controllers.js",
+     "view": "./modules/advanced/system/backupRestore/view.html"
++  },
++  "guestVlan": {
++    "controller": "./modules/advanced/network/guestVlan/controllers.js",
++    "view": "./modules/advanced/network/guestVlan/view.html"
++  },
++  "iotVlan": {
++    "controller": "./modules/advanced/network/iotVlan/controllers.js",
++    "view": "./modules/advanced/network/iotVlan/view.html"
+   }
+-}
+\ No newline at end of file
++}

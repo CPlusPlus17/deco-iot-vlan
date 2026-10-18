@@ -1,0 +1,69 @@
+--- a/lib/wifi/wifiupdate.sh
++++ b/lib/wifi/wifiupdate.sh
+@@ -1,4 +1,41 @@
+ #!/bin/sh
++
++# DECO_IOT_MANAGED_HOOKS_BEGIN
++# Own fixed fallback. Real reviewed callbacks replace these definitions below.
++deco_iot_is_managed() {
++    [ -e /etc/config/deco_iot_vlan ] ||
++    [ -e /tmp/deco-iot-managed/installation.json ] ||
++    [ -e /tp_data/user_data/deco-iot-vlan/installation.json ]
++}
++deco_iot_ready() { return 1; }
++deco_iot_owns_vlan() { return 1; }
++deco_iot_owns_network() { return 1; }
++deco_iot_before_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    deco_iot_is_managed || return 0
++    /bin/busybox rm -f /tmp/deco-iot-managed/ready.json || return 1
++    for deco_vap in ath08 ath18; do
++        [ -e "/sys/class/net/$deco_vap/ifindex" ] || continue
++        [ "$(uci -q get "wireless.$deco_vap.type")" = iot ] || return 1
++        /bin/busybox ifconfig "$deco_vap" down || return 1
++        deco_flags=$(/bin/busybox cat "/sys/class/net/$deco_vap/flags") || return 1
++        case "$deco_flags" in 0x*) deco_digits=${deco_flags#0x} ;; *) return 1 ;; esac
++        case "$deco_digits" in ''|*[!0123456789abcdefABCDEF]*) return 1 ;; esac
++        [ "${#deco_digits}" -le 8 ] || return 1
++        [ "$((deco_flags & 1))" -eq 0 ] || return 1
++    done
++    return 0
++}
++deco_iot_before_switch_load() { ! deco_iot_is_managed; }
++deco_iot_after_change() {
++    case "$1" in guest|network|firewall|wifi) ;; *) return 1 ;; esac
++    # Missing executor cannot authorize activation or publish readiness.
++    return 0
++}
++[ ! -r /tmp/deco-iot-managed/native_hooks.sh ] ||
++    . /tmp/deco-iot-managed/native_hooks.sh
++
++# DECO_IOT_MANAGED_HOOKS_END
+ #
+ # Copyright (c) 2014 TP-LINK Technologies Co., Ltd.
+ #
+@@ -1217,7 +1254,10 @@
+         done
+     done
+     
+-    [ "$brchanged" = "1" ] && [ -f /etc/init.d/hyd ] && /etc/init.d/hyd restart
++    if [ "$brchanged" = "1" ] && [ -f /etc/init.d/hyd ]; then
++        /etc/init.d/hyd restart || return "$?"
++    fi
++    return 0
+ }
+ 
+ 
+@@ -1808,6 +1848,12 @@
+ 
+ 
+ wifi_update() {
++    deco_iot_before_change wifi || return 1
++    deco_iot_native_wifi_update "$@" || return 1
++    deco_iot_after_change wifi || return 1
++}
++
++deco_iot_native_wifi_update() {
+     local action="${1//,/ }"
+     local device="${2//,/ }"
+     local vap="${3//,/ }"

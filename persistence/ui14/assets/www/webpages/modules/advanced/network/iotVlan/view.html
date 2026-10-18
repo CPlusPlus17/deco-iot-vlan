@@ -1,0 +1,17 @@
+<div view="{iotVlanView}">
+    <div widget="panel" title-label="{IOT_VLAN.TITLE}" instruction="{IOT_VLAN.DESCRIPTION}" collapsible="{false}">
+        <div widget="displaylabel" data-bind="{statusMessage}" label-field="{IOT_VLAN.STATUS}"></div>
+        <div widget="fieldset" data-bind="{details}" class="hidden">
+            <div widget="displaylabel" data-bind="{iotVlanStatus.fleet1}" label-field="{IOT_VLAN.NODE1}"></div>
+            <div widget="displaylabel" data-bind="{iotVlanStatus.fleet2}" label-field="{IOT_VLAN.NODE2}"></div>
+            <div widget="displaylabel" data-bind="{iotVlanStatus.fleet3}" label-field="{IOT_VLAN.NODE3}"></div>
+            <div widget="displaylabel" data-bind="{iotVlanStatus.saved}" label-field="{IOT_VLAN.SAVED}"></div>
+            <div widget="displaylabel" data-bind="{iotVlanStatus.persistence}" label-field="{IOT_VLAN.PERSISTENCE}"></div>
+            <div widget="displaylabel" data-bind="{iotVlanStatus.verification}" label-field="{IOT_VLAN.VERIFICATION}"></div>
+        </div>
+        <div widget="button" id="iot-vlan-refresh" data-bind="{refreshButton}" text="{IOT_VLAN.REFRESH}"></div>
+        <div widget="paragraph" text="{IOT_VLAN.CONTROL_SCOPE}"></div>
+        <div widget="button" id="iot-vlan-enable" data-bind="{enableButton}" text="{IOT_VLAN.ENABLE}" disabled="{true}"></div>
+        <div widget="button" id="iot-vlan-disable" data-bind="{disableButton}" text="{IOT_VLAN.DISABLE}" disabled="{true}"></div>
+    </div>
+</div>

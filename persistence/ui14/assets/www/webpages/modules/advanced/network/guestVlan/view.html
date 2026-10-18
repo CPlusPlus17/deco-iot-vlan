@@ -1,0 +1,14 @@
+<div view="{guestVlanView}">
+    <div widget="panel" title-label="{VLAN_STATUS.TITLE}" instruction="{VLAN_STATUS.DESCRIPTION}" collapsible="{false}">
+        <div widget="displaylabel" data-bind="{statusMessage}" label-field="{VLAN_STATUS.STATUS}"></div>
+        <div widget="fieldset" data-bind="{details}" class="hidden">
+            <div widget="displaylabel" data-bind="{guestVlanStatus.guestNetwork}" label-field="{VLAN_STATUS.GUEST_NETWORK}"></div>
+            <div widget="displaylabel" data-bind="{guestVlanStatus.guestTagging}" label-field="{VLAN_STATUS.GUEST_TAGGING}"></div>
+            <div widget="displaylabel" data-bind="{guestVlanStatus.guestVlanId}" label-field="{VLAN_STATUS.GUEST_VLAN_ID}"></div>
+            <div widget="displaylabel" data-bind="{guestVlanStatus.scope}" label-field="{VLAN_STATUS.SCOPE}"></div>
+            <div widget="displaylabel" data-bind="{guestVlanStatus.iotNetwork}" label-field="{VLAN_STATUS.IOT_NETWORK}"></div>
+            <div widget="displaylabel" data-bind="{guestVlanStatus.iotVlan}" label-field="{VLAN_STATUS.IOT_VLAN}"></div>
+        </div>
+        <div widget="paragraph" text="{VLAN_STATUS.READ_ONLY}"></div>
+    </div>
+</div>
